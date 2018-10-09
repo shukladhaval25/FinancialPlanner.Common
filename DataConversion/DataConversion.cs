@@ -20,15 +20,18 @@ namespace FinancialPlanner.Common.DataConversion
                 //Setting column names as Property names  
                 dataTable.Columns.Add(prop.Name);
             }
-            foreach (T item in items)
+            if (items != null)
             {
-                var values = new object[Props.Length];
-                for (int i = 0; i < Props.Length; i++)
+                foreach (T item in items)
                 {
+                    var values = new object[Props.Length];
+                    for (int i = 0; i < Props.Length; i++)
+                    {
 
-                    values[i] = Props[i].GetValue(item, null);
+                        values[i] = Props[i].GetValue(item, null);
+                    }
+                    dataTable.Rows.Add(values);
                 }
-                dataTable.Rows.Add(values);
             }
 
             return dataTable;

@@ -10,7 +10,7 @@ namespace FinancialPlanner.Common.Model
     {
         int _id;
         int _goalId;
-        double _laonAmount;
+        double _loanAmount;
         double _EMI;
         decimal _ROI;
         int _loanYears;
@@ -43,16 +43,16 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public double LaonAmount
+        public double LoanAmount
         {
             get
             {
-                return _laonAmount;
+                return _loanAmount;
             }
 
             set
             {
-                _laonAmount = value;
+                _loanAmount = value;
             }
         }
 
