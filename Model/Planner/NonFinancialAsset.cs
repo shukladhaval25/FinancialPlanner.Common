@@ -21,6 +21,7 @@ namespace FinancialPlanner.Common.Model
         int _assetMappingShare;
         string _assetRealisationYear;
         string _descryption;
+        decimal _growthPercentage;
 
         public int Id
         {
@@ -188,6 +189,19 @@ namespace FinancialPlanner.Common.Model
             set
             {
                 _currentValue = value;
+            }
+        }
+
+        public decimal GrowthPercentage
+        {
+            get
+            {
+                return _growthPercentage;
+            }
+
+            set
+            {
+                _growthPercentage = value;
             }
         }
     }
