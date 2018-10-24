@@ -99,6 +99,7 @@
     <Compile Include="Model\Planner\LoanForGoal.cs" />
     <Compile Include="Model\Planner\NonFinancialAsset.cs" />
     <Compile Include="Model\Planner\PlannerAssumption.cs" />
+    <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\RiskProfile\InvestmentSegment.cs" />
     <Compile Include="Model\RiskProfile\RecommendedSchemes.cs" />
     <Compile Include="Model\RiskProfile\RiskProfiledReturn.cs" />

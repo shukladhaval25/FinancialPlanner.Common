@@ -273,6 +273,13 @@ namespace FinancialPlanner.Common.Model
         UpdateMFTransactions,
         [Display(Name = "Delete MF Transaction")]
         DeleteMFTransactions,
+
+        [Display(Name = "Crate Current Status To Goal")]
+        CreateCurrentStatusToGoal,
+        [Display(Name = "Update Current Status To Goal")]
+        UpdateCurrentStatusToGoal,
+        [Display(Name = "Delete Current Status To Goal")]
+        DeleteCurrentStatusToGoal,
     }
 
     public enum Source
