@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinancialPlanner.Common.Model.CurrentStatus
 {
-    public abstract class BankAccount : Base
+    public class BankAccount : Base
     {
         int _id;
         int _pid;

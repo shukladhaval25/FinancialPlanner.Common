@@ -61,6 +61,7 @@
     <Compile Include="Model\ActivityType.cs" />
     <Compile Include="Model\ApplicationConfiguration.cs" />
     <Compile Include="Model\Base.cs" />
+    <Compile Include="Model\Client\BankAccountDetail.cs" />
     <Compile Include="Model\Client\Client.cs" />
     <Compile Include="Model\Client\ClientContact.cs" />
     <Compile Include="Model\Client\ClientEmployment.cs" />

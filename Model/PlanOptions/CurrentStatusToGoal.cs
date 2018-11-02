@@ -13,6 +13,7 @@ namespace FinancialPlanner.Common.Model.PlanOptions
         int _optionId;
         int _goalId;
         double _fundAllocation;
+        string _goalName;
 
         public int Id
         {
@@ -76,6 +77,19 @@ namespace FinancialPlanner.Common.Model.PlanOptions
             set
             {
                 _fundAllocation = value;
+            }
+        }
+
+        public string GoalName
+        {
+            get
+            {
+                return _goalName;
+            }
+
+            set
+            {
+                _goalName = value;
             }
         }
     }

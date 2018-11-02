@@ -280,6 +280,12 @@ namespace FinancialPlanner.Common.Model
         UpdateCurrentStatusToGoal,
         [Display(Name = "Delete Current Status To Goal")]
         DeleteCurrentStatusToGoal,
+        [Display(Name = "Create Bank Details")]
+        CreateBankAccount,
+        [Display(Name = "Update Bank Details")]
+        UpdateBankAccount,
+        [Display(Name = "Delete Bank Details")]
+        DeleteBankAccount,
     }
 
     public enum Source
