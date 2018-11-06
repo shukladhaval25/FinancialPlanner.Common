@@ -93,6 +93,7 @@
     <Compile Include="Model\EmailScheduler.cs" />
     <Compile Include="Model\Client\PersonalInformation.cs" />
     <Compile Include="Model\Planner.cs" />
+    <Compile Include="Model\Planner\Document.cs" />
     <Compile Include="Model\Planner\Expenses.cs" />
     <Compile Include="Model\Planner\Goals.cs" />
     <Compile Include="Model\Planner\Income.cs" />

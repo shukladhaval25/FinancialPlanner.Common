@@ -286,6 +286,12 @@ namespace FinancialPlanner.Common.Model
         UpdateBankAccount,
         [Display(Name = "Delete Bank Details")]
         DeleteBankAccount,
+        [Display(Name = "Create Document")]
+        CreateDocument,
+        [Display(Name = "Update Document")]
+        UpdateDocument,
+        [Display(Name = "Delete Document")]
+        DeleteDocument,
     }
 
     public enum Source
