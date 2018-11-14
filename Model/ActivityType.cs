@@ -18,7 +18,6 @@ namespace FinancialPlanner.Common.Model
         [Display(Name = "Logout")]
         Logout,
         
-
         [Display(Name = "Create User")]
         CreateUser,
         [Display(Name = "Delete User")]
@@ -280,18 +279,30 @@ namespace FinancialPlanner.Common.Model
         UpdateCurrentStatusToGoal,
         [Display(Name = "Delete Current Status To Goal")]
         DeleteCurrentStatusToGoal,
+
         [Display(Name = "Create Bank Details")]
         CreateBankAccount,
         [Display(Name = "Update Bank Details")]
         UpdateBankAccount,
         [Display(Name = "Delete Bank Details")]
         DeleteBankAccount,
+
         [Display(Name = "Create Document")]
         CreateDocument,
         [Display(Name = "Update Document")]
         UpdateDocument,
         [Display(Name = "Delete Document")]
         DeleteDocument,
+
+        [Display(Name = "Delete Festival")]
+        DeleteFestivals,
+        [Display(Name = "Create Festival")]
+        CreateFestivals,
+
+        [Display(Name = "Create CRM Group")]
+        CreateCRMGroup,
+        [Display(Name = "Delete CRM Group")]
+        DeleteCRMGroup,
     }
 
     public enum Source

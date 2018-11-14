@@ -14,6 +14,7 @@ namespace FinancialPlanner.Common.Model
         string _name;
         string _path;
         string _data;
+        string _category;
 
         public int Id
         {
@@ -90,6 +91,19 @@ namespace FinancialPlanner.Common.Model
             set
             {
                 _data = value;
+            }
+        }
+
+        public string Category
+        {
+            get
+            {
+                return _category;
+            }
+
+            set
+            {
+                _category = value;
             }
         }
     }
