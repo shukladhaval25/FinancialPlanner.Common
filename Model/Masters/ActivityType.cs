@@ -303,6 +303,9 @@ namespace FinancialPlanner.Common.Model
         CreateCRMGroup,
         [Display(Name = "Delete CRM Group")]
         DeleteCRMGroup,
+
+        [Display(Name = "Update Company")]
+        UpdateCompany,
     }
 
     public enum Source
