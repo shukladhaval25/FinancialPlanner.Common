@@ -90,6 +90,7 @@
     <Compile Include="Model\CurrentStatus\Shares.cs" />
     <Compile Include="Model\CurrentStatus\SukanyaSamrudhi.cs" />
     <Compile Include="Model\CurrentStatus\ULIP.cs" />
+    <Compile Include="Model\Masters\Area.cs" />
     <Compile Include="Model\Masters\Comapny.cs" />
     <Compile Include="Model\Masters\Email.cs" />
     <Compile Include="Model\Masters\EmailArticle.cs" />

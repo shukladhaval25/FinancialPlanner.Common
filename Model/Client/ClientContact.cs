@@ -14,6 +14,7 @@ namespace FinancialPlanner.Common.Model
         string _street;
         string _city;
         string _state;
+        string _area;
         string _pin;
         string _email;
         string _spouseEmail;
@@ -180,6 +181,19 @@ namespace FinancialPlanner.Common.Model
             set
             {
                 _primaryMobile = value;
+            }
+        }
+
+        public string Area
+        {
+            get
+            {
+                return _area;
+            }
+
+            set
+            {
+                _area = value;
             }
         }
     }
