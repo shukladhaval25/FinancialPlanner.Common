@@ -8,12 +8,18 @@ namespace FinancialPlanner.Common.Model.Masters
 {
     public class Company : Base
     {
+        int id;
+        int otid;
         string name;
         string address;
         string contactno;
         string email;
         string website;
         string registrationNo;
+        string gst;
+        string bank;
+        string accountno;
+        string panno;
 
         public string Name
         {
@@ -90,6 +96,84 @@ namespace FinancialPlanner.Common.Model.Masters
             set
             {
                 registrationNo = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public int Otid
+        {
+            get
+            {
+                return otid;
+            }
+
+            set
+            {
+                otid = value;
+            }
+        }
+
+        public string Gst
+        {
+            get
+            {
+                return gst;
+            }
+
+            set
+            {
+                gst = value;
+            }
+        }
+
+        public string Bank
+        {
+            get
+            {
+                return bank;
+            }
+
+            set
+            {
+                bank = value;
+            }
+        }
+
+        public string Accountno
+        {
+            get
+            {
+                return accountno;
+            }
+
+            set
+            {
+                accountno = value;
+            }
+        }
+
+        public string Panno
+        {
+            get
+            {
+                return panno;
+            }
+
+            set
+            {
+                panno = value;
             }
         }
     }

@@ -306,8 +306,19 @@ namespace FinancialPlanner.Common.Model
 
         [Display(Name = "Update Company")]
         UpdateCompany,
+
+        [Display(Name = "Delete Area")]
         DeleteArea,
+        [Display(Name ="Create Area")]
         CreateArea,
+
+
+        [Display(Name = "Delete Organisation type")]
+        DeleteOrganisationType,
+        [Display(Name = "Create Organisation type")]
+        CreateOrganisationType,
+        [Display(Name = "Update Organisation type")]
+        UpdateOrganisationType,
     }
 
     public enum Source

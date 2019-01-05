@@ -98,6 +98,7 @@
     <Compile Include="Model\Masters\EmailGroup.cs" />
     <Compile Include="Model\Masters\EmailScheduler.cs" />
     <Compile Include="Model\Client\PersonalInformation.cs" />
+    <Compile Include="Model\Masters\OrganisationType.cs" />
     <Compile Include="Model\Planner\Planner.cs" />
     <Compile Include="Model\Planner\AssumptionMaster.cs" />
     <Compile Include="Model\Planner\Document.cs" />
