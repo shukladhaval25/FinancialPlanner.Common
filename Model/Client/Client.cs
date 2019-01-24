@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinancialPlanner.Common.Model
 {
-    public class Client : Base 
+    public class Client : Base
     {
         private int _id;
         private string _name;
@@ -92,7 +92,7 @@ namespace FinancialPlanner.Common.Model
         public string ImagePath
         {
             get { return _imagePath; }
-            set { _imagePath = value;}
+            set { _imagePath = value; }
         }
         public string ImageData
         {
