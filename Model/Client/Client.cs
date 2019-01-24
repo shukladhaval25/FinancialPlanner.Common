@@ -21,13 +21,14 @@ namespace FinancialPlanner.Common.Model
         private DateTime? _marriageAnniversyDate;
         private string _occupation;
         private string _incomeSlab;
+        private string _imagePath;
+        private string _imageData;
 
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
-
         public string Name
         {
             get { return _name; }
@@ -87,6 +88,16 @@ namespace FinancialPlanner.Common.Model
         {
             get { return _incomeSlab; }
             set { _incomeSlab = value; }
+        }
+        public string ImagePath
+        {
+            get { return _imagePath; }
+            set { _imagePath = value;}
+        }
+        public string ImageData
+        {
+            get { return _imageData; }
+            set { _imageData = value; }
         }
     }
 }
