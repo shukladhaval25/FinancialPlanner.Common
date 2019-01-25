@@ -319,6 +319,13 @@ namespace FinancialPlanner.Common.Model
         CreateOrganisationType,
         [Display(Name = "Update Organisation type")]
         UpdateOrganisationType,
+
+        [Display(Name = "Update Process Action")]
+        UpdateProcessAction,
+        [Display(Name = "Delete Process Action")]
+        DeleteProcessAction,
+        [Display(Name = "Create Process Action")]
+        CreateProcessAction,
     }
 
     public enum Source
