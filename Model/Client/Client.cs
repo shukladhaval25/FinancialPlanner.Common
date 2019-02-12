@@ -23,7 +23,7 @@ namespace FinancialPlanner.Common.Model
         private string _incomeSlab;
         private string _imagePath;
         private string _imageData;
-
+        private bool _isDelete;
         public int ID
         {
             get { return _id; }
@@ -98,6 +98,11 @@ namespace FinancialPlanner.Common.Model
         {
             get { return _imageData; }
             set { _imageData = value; }
+        }
+        public bool IsDeleted
+        {
+            get { return _isDelete; }
+            set { _isDelete = value; }
         }
     }
 }

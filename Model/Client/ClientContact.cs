@@ -22,10 +22,8 @@ namespace FinancialPlanner.Common.Model
         string _spousemobile;
         string _primaryEmail;
         string _primaryMobile;
-        string _preferedPhoneCallMode;
-        string _preferedContactTimeFrom;
-        string _preferedContactTimeUpto;
-
+        string _preferedTime;
+        
         public int Id
         {
             get { return _id; }
@@ -201,42 +199,16 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public string PreferedPhoneCallMode
+        public string PreferedTime
         {
             get
             {
-                return _preferedPhoneCallMode;
+                return _preferedTime;
             }
 
             set
             {
-                _preferedPhoneCallMode = value;
-            }
-        }
-
-        public string PreferedContactTimeFrom
-        {
-            get
-            {
-                return _preferedContactTimeFrom;
-            }
-
-            set
-            {
-                _preferedContactTimeFrom = value;
-            }
-        }
-
-        public string PreferedContactTimeUpto
-        {
-            get
-            {
-                return _preferedContactTimeUpto;
-            }
-
-            set
-            {
-                _preferedContactTimeUpto = value;
+                _preferedTime = value;
             }
         }
     }

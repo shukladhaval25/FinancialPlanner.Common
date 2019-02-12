@@ -20,6 +20,10 @@ namespace FinancialPlanner.Common.Model
         decimal _debtReturnRate;
         decimal _otherReturnRate;
         string _decription;
+        bool _isClientRetirmentAgeIsPrimary;
+        decimal _clientIncomeRise;
+        decimal _spouseIncomeRise;
+        decimal _ongoingExpRise;
 
         public int Id
         {
@@ -176,5 +180,10 @@ namespace FinancialPlanner.Common.Model
                 _decription = value;
             }
         }
+
+        public bool IsClientRetirmentAgeIsPrimary { get => _isClientRetirmentAgeIsPrimary; set => _isClientRetirmentAgeIsPrimary = value; }
+        public decimal ClientIncomeRise { get => _clientIncomeRise; set => _clientIncomeRise = value; }
+        public decimal SpouseIncomeRise { get => _spouseIncomeRise; set => _spouseIncomeRise = value; }
+        public decimal OngoingExpRise { get => _ongoingExpRise; set => _ongoingExpRise = value; }
     }
 }
