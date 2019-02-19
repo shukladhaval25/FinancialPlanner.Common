@@ -14,6 +14,8 @@ namespace FinancialPlanner.Common.Model
         private string _name;
         private DateTime _startDate;
         private int _plannerStartMonth;
+        private int _accountManagedBy;
+        private string _description;
 
         public int ID
         {
@@ -59,5 +61,8 @@ namespace FinancialPlanner.Common.Model
                 return strDate.AddMonths(-1).Month;
             }
         }
+
+        public int AccountManagedBy { get => _accountManagedBy; set => _accountManagedBy = value; }
+        public string Description { get => _description; set => _description = value; }
     }
 }
