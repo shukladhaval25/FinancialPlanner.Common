@@ -13,7 +13,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         string _investerName;
         string _schemeName;
         float _nav = 0;
-        int _units = 0;
+        double _units = 0;
         double _currentValue = 0;
         float _equityRatio;
         float _goldRatio;
@@ -79,7 +79,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
             }
         }
 
-        public int Units
+        public double Units
         {
             get
             {
