@@ -14,6 +14,7 @@ namespace FinancialPlanner.Common.Model
         string _item;
         ExpenseType _occuranceType;
         double _amount;
+        private bool _eligibleForInsuranceCoverage;
 
         public int Id
         {
@@ -93,6 +94,7 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
+        public bool EligibleForInsuranceCoverage { get => _eligibleForInsuranceCoverage; set => _eligibleForInsuranceCoverage = value; }
     }
     public enum ExpenseType
     {

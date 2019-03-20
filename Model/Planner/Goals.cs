@@ -20,6 +20,7 @@ namespace FinancialPlanner.Common.Model
         string _description;
         decimal _inflationRate;
         LoanForGoal _loanForGoal;
+        bool _eligbibleForInsurnceCoverage;
         public int Id
         {
             get
@@ -175,5 +176,7 @@ namespace FinancialPlanner.Common.Model
                 _loanForGoal = value;
             }
         }
+
+        public bool EligibleForInsuranceCoverage { get => _eligbibleForInsurnceCoverage; set => _eligbibleForInsurnceCoverage = value; }
     }
 }
