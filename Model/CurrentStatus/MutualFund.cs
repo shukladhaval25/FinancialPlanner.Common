@@ -26,6 +26,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         string _firstHolder;
         string _secondHolder;
         string _nominee;
+        float _investmentReturnRate;
 
         public int Id
         {
@@ -256,5 +257,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _nominee = value;
             }
         }
+
+        public float InvestmentReturnRate { get => _investmentReturnRate; set => _investmentReturnRate = value; }
     }
 }

@@ -21,6 +21,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _SIP;
         int? _goalID;
         string _folioNo;
+        float _investmentReturnRate;
 
         public int Id
         {
@@ -185,5 +186,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _folioNo = value;
             }
         }
+
+        public float InvestmentReturnRate { get => _investmentReturnRate; set => _investmentReturnRate = value; }
     }
 }

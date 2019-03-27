@@ -9,6 +9,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
     public class CurrentStatusCalculation
     {
         int _pid;
+        //List<Tuple<string, double, float>> _currestStatusInstruments;
         double _shresValue;
         double _equityMFvalue;
         double _npsEquityValue;
