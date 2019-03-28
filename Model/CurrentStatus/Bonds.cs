@@ -19,6 +19,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         float _faceValue;
         double _currentValue;
         int? _goalId;
+        float _investmentReturnRate;
 
         public int Id
         {
@@ -160,6 +161,19 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
             set
             {
                 _goalId = value;
+            }
+        }
+
+        public float InvestmentReturnRate
+        {
+            get
+            {
+                return _investmentReturnRate;
+            }
+
+            set
+            {
+                _investmentReturnRate = value;
             }
         }
     }
