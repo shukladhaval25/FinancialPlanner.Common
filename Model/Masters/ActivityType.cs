@@ -326,6 +326,13 @@ namespace FinancialPlanner.Common.Model
         DeleteProcessAction,
         [Display(Name = "Create Process Action")]
         CreateProcessAction,
+
+        [Display(Name = "Update EPF")]
+        UpdateEPF,
+        [Display(Name = "Delete EPF")]
+        DeleteEPF,
+        [Display(Name = "Create EPF")]
+        CreateEPF,
     }
 
     public enum Source
