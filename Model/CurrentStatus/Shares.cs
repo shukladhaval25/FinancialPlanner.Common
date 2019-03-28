@@ -178,6 +178,10 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
             }
         }
 
-        public float InvestmentReturnRate { get => _investmentReturnRate; set => _investmentReturnRate = value; }
+        public float InvestmentReturnRate
+        {
+            get { return _investmentReturnRate; }
+            set { _investmentReturnRate = value; }
+        }
     }
 }

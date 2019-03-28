@@ -6,7 +6,6 @@ D:\Dhaval.Shukla\My Documents\Visual Studio 2015\Projects\FinancialPlanner.Commo
 D:\Dhaval.Shukla\My Documents\Visual Studio 2015\Projects\FinancialPlanner.Common\bin\Debug\log4net.xml
 D:\Dhaval.Shukla\My Documents\Visual Studio 2015\Projects\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.dll
 D:\Dhaval.Shukla\My Documents\Visual Studio 2015\Projects\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.pdb
-D:\Dhaval.Shukla\My Documents\Visual Studio 2015\Projects\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.csprojResolveAssemblyReference.cache
 C:\Application Development\Financial Planner Project\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.dll.config
 C:\Application Development\Financial Planner Project\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.dll
 C:\Application Development\Financial Planner Project\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.pdb

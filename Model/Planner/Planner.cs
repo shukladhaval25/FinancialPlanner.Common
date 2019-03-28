@@ -62,7 +62,15 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public int AccountManagedBy { get => _accountManagedBy; set => _accountManagedBy = value; }
-        public string Description { get => _description; set => _description = value; }
+        public int AccountManagedBy
+        {
+            get { return _accountManagedBy; }
+            set { _accountManagedBy = value; }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
     }
 }

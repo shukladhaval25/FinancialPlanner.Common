@@ -177,6 +177,10 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public bool EligibleForInsuranceCoverage { get => _eligbibleForInsurnceCoverage; set => _eligbibleForInsurnceCoverage = value; }
+        public bool EligibleForInsuranceCoverage
+        {
+            get { return _eligbibleForInsurnceCoverage; }
+            set { _eligbibleForInsurnceCoverage = value; }
+        }
     }
 }

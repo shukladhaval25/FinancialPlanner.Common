@@ -181,9 +181,24 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public bool IsClientRetirmentAgeIsPrimary { get => _isClientRetirmentAgeIsPrimary; set => _isClientRetirmentAgeIsPrimary = value; }
-        public decimal ClientIncomeRise { get => _clientIncomeRise; set => _clientIncomeRise = value; }
-        public decimal SpouseIncomeRise { get => _spouseIncomeRise; set => _spouseIncomeRise = value; }
-        public decimal OngoingExpRise { get => _ongoingExpRise; set => _ongoingExpRise = value; }
+        public bool IsClientRetirmentAgeIsPrimary {
+            get { return _isClientRetirmentAgeIsPrimary; }
+            set { _isClientRetirmentAgeIsPrimary = value; }
+        }
+        public decimal ClientIncomeRise
+        {
+            get { return _clientIncomeRise; }
+            set { _clientIncomeRise = value; }
+        }
+        public decimal SpouseIncomeRise
+        {
+            get { return _spouseIncomeRise; }
+            set { _spouseIncomeRise = value; }
+        }
+        public decimal OngoingExpRise
+        {
+            get { return _ongoingExpRise; }
+            set { _ongoingExpRise = value; }
+        }
     }
 }

@@ -94,7 +94,11 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public bool EligibleForInsuranceCoverage { get => _eligibleForInsuranceCoverage; set => _eligibleForInsuranceCoverage = value; }
+        public bool EligibleForInsuranceCoverage
+        {
+            get { return _eligibleForInsuranceCoverage; }
+            set { _eligibleForInsuranceCoverage = value; }
+        }
     }
     public enum ExpenseType
     {
