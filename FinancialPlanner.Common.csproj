@@ -57,6 +57,7 @@
     <Compile Include="ISerialization.cs" />
     <Compile Include="JSONSerialization.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="Model\CurrentStatus\CurrentStatusInstrument.cs" />
     <Compile Include="Model\CurrentStatus\EPF.cs" />
     <Compile Include="Model\Masters\Activities.cs" />
     <Compile Include="Model\Masters\ActivityType.cs" />

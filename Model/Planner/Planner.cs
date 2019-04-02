@@ -16,6 +16,7 @@ namespace FinancialPlanner.Common.Model
         private int _plannerStartMonth;
         private int _accountManagedBy;
         private string _description;
+        private bool _isDeleted = false;
 
         public int ID
         {
@@ -72,5 +73,7 @@ namespace FinancialPlanner.Common.Model
             get { return _description; }
             set { _description = value; }
         }
+
+        public bool IsDeleted { get => _isDeleted; set => _isDeleted = value; }
     }
 }
