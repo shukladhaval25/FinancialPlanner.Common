@@ -104,6 +104,9 @@ namespace FinancialPlanner.Common.Model
         [Display(Name ="Update Planner Assumption")]
         UpdatePlannerAssumption,
 
+        [Display(Name = "Update Assumption Master")]
+        UpdateAssumptionMaster,
+
         [Display(Name = "Create Expense")]
         CreateExpenses,
         [Display(Name = "Update Expense")]

@@ -17,6 +17,7 @@ namespace FinancialPlanner.Common.Model
         private int _accountManagedBy;
         private string _description;
         private bool _isDeleted = false;
+        private string _reviewFrequency;
 
         public int ID
         {
@@ -75,5 +76,6 @@ namespace FinancialPlanner.Common.Model
         }
 
         public bool IsDeleted { get => _isDeleted; set => _isDeleted = value; }
+        public string ReviewFrequency { get => _reviewFrequency; set => _reviewFrequency = value; }
     }
 }
