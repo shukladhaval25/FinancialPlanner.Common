@@ -336,6 +336,10 @@ namespace FinancialPlanner.Common.Model
         DeleteEPF,
         [Display(Name = "Create EPF")]
         CreateEPF,
+        [Display(Name = "Delete Client Rating")]
+        DeleteClientRating,
+        [Display(Name = "Create Client Rating")]
+        CreateClientRating,
     }
 
     public enum Source

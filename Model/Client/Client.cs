@@ -24,6 +24,8 @@ namespace FinancialPlanner.Common.Model
         private string _imagePath;
         private string _imageData;
         private bool _isDelete;
+        private string _rating;
+        private string _clientType;
         public int ID
         {
             get { return _id; }
@@ -104,5 +106,8 @@ namespace FinancialPlanner.Common.Model
             get { return _isDelete; }
             set { _isDelete = value; }
         }
+
+        public string Rating { get => _rating; set => _rating = value; }
+        public string ClientType { get => _clientType; set => _clientType = value; }
     }
 }
