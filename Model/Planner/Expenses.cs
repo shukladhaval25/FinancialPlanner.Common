@@ -15,6 +15,10 @@ namespace FinancialPlanner.Common.Model
         ExpenseType _occuranceType;
         double _amount;
         private bool _eligibleForInsuranceCoverage;
+        string _expStartYear;
+        string _expEndYear;
+        float _inflationRate;
+        string _description;
 
         public int Id
         {
@@ -99,6 +103,11 @@ namespace FinancialPlanner.Common.Model
             get { return _eligibleForInsuranceCoverage; }
             set { _eligibleForInsuranceCoverage = value; }
         }
+
+        public string ExpStartYear { get => _expStartYear; set => _expStartYear = value; }
+        public string ExpEndYear { get => _expEndYear; set => _expEndYear = value; }
+        public float InflationRate { get => _inflationRate; set => _inflationRate = value; }
+        public string Description { get => _description; set => _description = value; }
     }
     public enum ExpenseType
     {
