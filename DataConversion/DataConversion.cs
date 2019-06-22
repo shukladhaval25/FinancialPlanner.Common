@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -35,6 +36,26 @@ namespace FinancialPlanner.Common.DataConversion
             }
 
             return dataTable;
+        }
+    }
+
+    public static class FPImage
+    {
+        public static Bitmap AddTextToImageOnTopRight(string text, Image sourceImage)
+        {           
+            //string imageFilePath = btnNotification.Image.i
+            Bitmap bitmap = (Bitmap)sourceImage;   //Image.FromFile(imageFilePath);//load the image file
+
+            using (Graphics graphics = Graphics.FromImage(bitmap))
+            {
+                using (Font arialFont = new Font("Tahoma", 10, FontStyle.Bold))
+                {
+                    graphics.DrawString(text, arialFont, Brushes.Black, new Point(8, 8));
+                }
+                graphics.DrawArc(new Pen(Color.Red, 3), 90, 235, 150, 50, 0, 360);
+            }
+            return bitmap;
+            //bitmap.Save(imageFilePath);//save the image file
         }
     }
 }
