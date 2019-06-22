@@ -61,7 +61,6 @@
     <Compile Include="EmailManager\EmailService.cs" />
     <Compile Include="EmailManager\MailServer.cs" />
     <Compile Include="ExportExcel.cs" />
-    <Compile Include="Global.cs" />
     <Compile Include="ISerialization.cs" />
     <Compile Include="JSONSerialization.cs" />
     <Compile Include="Logger.cs" />

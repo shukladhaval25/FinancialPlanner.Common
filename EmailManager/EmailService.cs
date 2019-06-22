@@ -4,7 +4,20 @@ using System.Collections.Generic;
 namespace FinancialPlanner.Common.EmailManager
 {
     public class EmailService
-    {        
+    {
+        public EmailService(string SmtpHost, int SmtPort,string UserName, string pwd, bool isSSL,
+            string fromEmail,string impsHost, string impsPort )
+        {
+            MailServer.HostName = SmtpHost;
+            MailServer.HostPort = SmtPort;
+            MailServer.UserName = UserName;
+            MailServer.Password = pwd;
+            MailServer.IsSSL = isSSL;
+            MailServer.FromEmail = fromEmail;
+            MailServer.POP3_IMPS_HostName = impsHost;
+            MailServer.POP3_IMPS_HostPort = impsPort;
+            
+        }
         public IList<Email> GetAllMails()
         {
             IList<Email> emails = new List<Email>();
@@ -12,7 +25,7 @@ namespace FinancialPlanner.Common.EmailManager
             {
                 if (imap.UnlockComponent("EASYDAIMAPMAILQ_vcyhVCXs2N0G"))
                 {
-                    if (connectToMailServer(imap))
+                    if (connectToIMAPMailServer(imap))
                     {
 
                         bool success = imap.SelectMailbox("Inbox");
@@ -75,13 +88,24 @@ namespace FinancialPlanner.Common.EmailManager
             return emails;         
         }
 
-        private static bool connectToMailServer(Imap imap)
+        private static bool connectToIMAPMailServer(Imap imap)
+        {
+            imap.AppendSeen = true;
+            imap.Port = int.Parse(MailServer.POP3_IMPS_HostPort);
+            imap.Ssl = MailServer.IsSSL;
+            imap.Connect(MailServer.POP3_IMPS_HostName);
+            imap.Login(MailServer.UserName, FinancialPlanner.Common.DataEncrypterDecrypter.CryptoEngine.Decrypt(MailServer.Password));
+            return imap.IsConnected();
+        }
+
+        private static bool connectToSmtpMailServer(Imap imap)
         {
             imap.AppendSeen = true;
             imap.Port = MailServer.HostPort;
             imap.Ssl = MailServer.IsSSL;
             imap.Connect(MailServer.HostName);
-            imap.Login(MailServer.UserName, MailServer.Password);
+            imap.Login(MailServer.UserName,
+                FinancialPlanner.Common.DataEncrypterDecrypter.CryptoEngine.Decrypt(MailServer.Password));                ;
             return imap.IsConnected();
         }
 
