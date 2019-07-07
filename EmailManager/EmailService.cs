@@ -1,10 +1,13 @@
 ﻿using Chilkat;
 using System.Collections.Generic;
+using System.Data;
 
 namespace FinancialPlanner.Common.EmailManager
 {
     public class EmailService
     {
+        private bool success;
+
         public EmailService(string SmtpHost, int SmtPort,string UserName, string pwd, bool isSSL,
             string fromEmail,string impsHost, string impsPort )
         {
@@ -27,31 +30,71 @@ namespace FinancialPlanner.Common.EmailManager
                 {
                     if (connectToIMAPMailServer(imap))
                     {
-
-                        bool success = imap.SelectMailbox("Inbox");
+                        Chilkat.MessageSet messageSet = null;
+                        bool fetchUids = false;
+                        // Select an IMAP mailbox
+                        success = imap.SelectMailbox("Inbox");
                         if (success != true)
                         {
-                            Logger.LogDebug(imap.LastErrorText);
+                            //Debug.WriteLine(imap.LastErrorText);
                             return null;
                         }
 
-                        bool bUid = false;
-                        string mimeStr;
-                        int n = imap.NumMessages;
-                       
+
+                        messageSet = imap.Search("FROM eugen@baeldung.com", fetchUids);
+                        /*if (success != true)
+                        {
+                            Logger.LogDebug(imap.LastErrorText);
+                            return null;
+                        }*/
+                        //if (imap.LastMethodSuccess == false)
+                        //{
+                        //    //Debug.WriteLine(imap.LastErrorText);
+                        //    return null;
+                        //}
+
+                        //bool bUid = false;
+                        //string mimeStr;
+                        //int n = imap.NumMessages;
+
+                        Chilkat.EmailBundle bundle = null;
+                        bundle = imap.FetchBundle(messageSet);
+                        int i = 0;
+                        while (i < bundle.MessageCount)
+                        {
+                            Chilkat.Email email = null;
+                            email = bundle.GetEmail(i);
+                            emails.Add(email);
+                            //DataRow drEmail = dtEmails.NewRow();
+                            //drEmail["From"] = email.From;
+                            //drEmail["FromAddress"] = email.FromAddress;
+                            //drEmail["FromName"] = email.FromName;
+                            ////drEmail["To"] = email.;
+                            //drEmail["LocalDate"] = email.LocalDate;
+                            //drEmail["Subject"] = email.Subject;
+                            //drEmail["Body"] = email.Body;
+                            //drEmail["NumAttachedMessages"] = email.NumAttachments;
+                            //drEmail["Size"] = email.Size;
+                            //drEmail["NumDaysOld"] = email.NumDaysOld;
+                            //dtEmails.Rows.Add(drEmail);
+                            i = i + 1;
+                        }
+
 
                         // An alternative is to download each email in the form of an
                         // email object, like this:
-                        Chilkat.Email email = null;
-                        for (int i = 1; i <= n; i++)
-                        {
+                        //Chilkat.Email email = null;
+                        //for (int i = 1; i <= n; i++)
+                        //{
 
-                            // Download the email by sequence number.
-                            email = imap.FetchSingle(i, bUid);                          
-                            emails.Add(email);
-                            // ... your application may process the email object...
+                        //    // Download the email by sequence number.
+                        //    email = imap.FetchSingle(i, bUid);                          
+                        //    emails.Add(email);
+                        //    if (i > 100)
+                        //        break;
+                        //    // ... your application may process the email object...
 
-                        }
+                        //}
 
                         // Disconnect from the IMAP server.
                         success = imap.Disconnect();
@@ -90,6 +133,11 @@ namespace FinancialPlanner.Common.EmailManager
 
         private static bool connectToIMAPMailServer(Imap imap)
         {
+            if (string.IsNullOrEmpty(MailServer.POP3_IMPS_HostName) || 
+                string.IsNullOrEmpty(MailServer.UserName) || string.IsNullOrEmpty(MailServer.Password))
+            {
+                return false;
+            }
             imap.AppendSeen = true;
             imap.Port = int.Parse(MailServer.POP3_IMPS_HostPort);
             imap.Ssl = MailServer.IsSSL;
