@@ -13,6 +13,7 @@ namespace FinancialPlanner.Common.Model
         string _category;
         string _name;
         double _amount;
+        double _otherAmount;
         string _startYear;
         string _endYear;
         int? __recurrence;
@@ -85,7 +86,18 @@ namespace FinancialPlanner.Common.Model
                 _amount = value;
             }
         }
+        public double OtherAmount
+        {
+            get
+            {
+                return _otherAmount;
+            }
 
+            set
+            {
+                _otherAmount = value;
+            }
+        }
         public string StartYear
         {
             get
