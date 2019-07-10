@@ -17,6 +17,7 @@ namespace FinancialPlanner.Common.Model
         int _termLeftInMonths;
         int _noEmisPayableUntilYear;
         string _description;
+        DateTime _loanStartDate;
 
         public int Id
         {
@@ -133,6 +134,12 @@ namespace FinancialPlanner.Common.Model
             {
                 _description = value;
             }
+        }
+
+        public DateTime LoanStartDate
+        {
+            get { return _loanStartDate; }
+            set { _loanStartDate = value; }
         }
     }
 }
