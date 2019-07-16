@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialPlanner.Common.Model.TaskManagement.TaskType;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace FinancialPlanner.Common.Model.TaskManagement
     {
         string id;
         string projectId;
+        int transactionType;
+
+        ITaskTransactionType taskTransactionType;
+
         CardType type;
         string title;
         int? customerId;
@@ -43,6 +48,8 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public DateTime DueDate { get => dueDate; set => dueDate = value; }
         public List<string> Watchers { get => watchers; set => watchers = value; }
         public DateTime ActualCompletedDate { get => actualCompletedDate; set => actualCompletedDate = value; }
+        public int TransactionType { get => transactionType; set => transactionType = value; }
+        public ITaskTransactionType TaskTransactionType { get => taskTransactionType; set => taskTransactionType = value; }
     }
 
     public class TaskTransition
@@ -84,5 +91,11 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         string changeValue;
         string changeBy;
         DateTime changedOn;
+        TaskCard taskCard = new TaskCard();
+        public  TaskHistory()
+        {
+            ITaskTransactionType sipTransaction = new SIPTransaction();
+            taskCard.TaskTransactionType = sipTransaction;
+        }
     }
 }

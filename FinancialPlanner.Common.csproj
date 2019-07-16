@@ -30,6 +30,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ChilkatDotNet4, Version=9.4.1.0, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -132,12 +168,18 @@
     <Compile Include="Model\ProspectClient.cs" />
     <Compile Include="Model\ProspectClientConversation.cs" />
     <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\TaskManagement\TaskType\ITaskTransactionType.cs" />
+    <Compile Include="Model\TaskManagement\TaskType\SIP.cs" />
+    <Compile Include="Model\TaskManagement\TaskType\SIPTransaction.cs" />
+    <Compile Include="Model\TaskManagement\TaskType\TransactionEnum.cs" />
+    <Compile Include="Model\TaskManagement\TransactionType.cs" />
     <Compile Include="Model\RolesSecurity\EntityMaster.cs" />
     <Compile Include="Model\RolesSecurity\Roles.cs" />
     <Compile Include="Model\RolesSecurity\RolesSecurity.cs" />
     <Compile Include="Model\Masters\User.cs" />
     <Compile Include="Model\Masters\UserSession.cs" />
     <Compile Include="Model\TaskManagement\CardType.cs" />
+    <Compile Include="Model\TaskManagement\Project.cs" />
     <Compile Include="Model\TaskManagement\TaskCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestAPIExecutor.cs" />
