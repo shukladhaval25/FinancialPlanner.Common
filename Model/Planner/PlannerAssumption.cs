@@ -24,6 +24,7 @@ namespace FinancialPlanner.Common.Model
         decimal _clientIncomeRise;
         decimal _spouseIncomeRise;
         decimal _ongoingExpRise;
+        decimal _postRetirementInvestmentReturnRate;
 
         public int Id
         {
@@ -200,5 +201,7 @@ namespace FinancialPlanner.Common.Model
             get { return _ongoingExpRise; }
             set { _ongoingExpRise = value; }
         }
+
+        public decimal PostRetirementInvestmentReturnRate { get => _postRetirementInvestmentReturnRate; set => _postRetirementInvestmentReturnRate = value; }
     }
 }
