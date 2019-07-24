@@ -9,11 +9,13 @@ namespace FinancialPlanner.Common.Model.TaskManagement
     public class TransactionType : Base
     {
         int id;
-        string projectId;
+        int projectId;
         string transactionName;
+        string description;
 
         public int Id { get => id; set => id = value; }
-        public string ProjectId { get => projectId; set => projectId = value; }
+        public int ProjectId { get => projectId; set => projectId = value; }
         public string TransactionName { get => transactionName; set => transactionName = value; }
+        public string Description { get => description; set => description = value; }
     }
 }

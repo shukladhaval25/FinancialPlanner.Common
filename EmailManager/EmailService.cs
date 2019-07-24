@@ -21,7 +21,7 @@ namespace FinancialPlanner.Common.EmailManager
             MailServer.POP3_IMPS_HostPort = impsPort;
             
         }
-        public IList<Email> GetAllMails()
+        public IList<Email> GetAllMails(string fromEmailID)
         {
             IList<Email> emails = new List<Email>();
             using (Chilkat.Imap imap = new Imap())
@@ -41,7 +41,7 @@ namespace FinancialPlanner.Common.EmailManager
                         }
 
 
-                        messageSet = imap.Search("FROM eugen@baeldung.com", fetchUids);
+                        messageSet = imap.Search(string.Format("FROM {0}",fromEmailID) , fetchUids);
                         /*if (success != true)
                         {
                             Logger.LogDebug(imap.LastErrorText);

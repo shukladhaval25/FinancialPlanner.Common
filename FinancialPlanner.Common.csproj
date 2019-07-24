@@ -102,6 +102,7 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Model\CurrentStatus\CurrentStatusInstrument.cs" />
     <Compile Include="Model\CurrentStatus\EPF.cs" />
+    <Compile Include="Model\CurrentStatus\Others.cs" />
     <Compile Include="Model\Masters\Activities.cs" />
     <Compile Include="Model\Masters\ActivityType.cs" />
     <Compile Include="Model\Masters\ApplicationConfiguration.cs" />

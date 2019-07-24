@@ -240,7 +240,7 @@ namespace FinancialPlanner.Common.Model
         UpdatePPF,
         [Display(Name = "Delete PPF")]
         DeletePPF,
-
+        
         [Display(Name = "Create SCSS")]
         CreateSCSS,
         [Display(Name = "Update SCSS")]
@@ -336,10 +336,25 @@ namespace FinancialPlanner.Common.Model
         DeleteEPF,
         [Display(Name = "Create EPF")]
         CreateEPF,
+
+        [Display(Name = "Update Others")]
+        UpdateOthers,
+        [Display(Name = "Delete Others")]
+        DeleteOthers,
+        [Display(Name = "Create Others")]
+        CreateOthers,
+
         [Display(Name = "Delete Client Rating")]
         DeleteClientRating,
         [Display(Name = "Create Client Rating")]
         CreateClientRating,
+
+        [Display(Name ="Creat Task Project")]
+        CreateTaskProject,
+        [Display(Name = "Update Task Project")]
+        UpdateTaskProject,
+        [Display(Name = "Delete Task Project")]
+        DeleteTaskProject,
     }
 
     public enum Source
