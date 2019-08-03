@@ -8,5 +8,8 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
 {
     public class Others : EPF
     {
+        string transactionType;
+
+        public string TransactionType { get => transactionType; set => transactionType = value; }
     }
 }

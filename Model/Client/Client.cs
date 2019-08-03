@@ -26,6 +26,7 @@ namespace FinancialPlanner.Common.Model
         private bool _isDelete;
         private string _rating;
         private string _clientType;
+        private string _resiStatus;
         public int ID
         {
             get { return _id; }
@@ -109,5 +110,6 @@ namespace FinancialPlanner.Common.Model
 
         public string Rating { get => _rating; set => _rating = value; }
         public string ClientType { get => _clientType; set => _clientType = value; }
+        public string ResiStatus { get => _resiStatus; set => _resiStatus = value; }
     }
 }

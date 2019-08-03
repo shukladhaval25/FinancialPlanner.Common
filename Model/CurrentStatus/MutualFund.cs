@@ -97,9 +97,17 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         {
             get
             {
-                _currentValue = (_nav * _units);
+                if (_nav > 0 && _units > 0)
+                {
+                    _currentValue = (_nav * _units);
+                    return _currentValue;
+                }
                 return _currentValue;
-            }           
+            }
+            set
+            {
+                _currentValue = value;
+            }
         }
 
         public float EquityRatio

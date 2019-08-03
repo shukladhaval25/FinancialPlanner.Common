@@ -169,6 +169,9 @@
     <Compile Include="Model\ProspectClient.cs" />
     <Compile Include="Model\ProspectClientConversation.cs" />
     <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\AdditionalPurchase.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\ARN.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
     <Compile Include="Model\TaskManagement\TaskType\ITaskTransactionType.cs" />
     <Compile Include="Model\TaskManagement\TaskType\SIP.cs" />
     <Compile Include="Model\TaskManagement\TaskType\SIPTransaction.cs" />
@@ -195,6 +198,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

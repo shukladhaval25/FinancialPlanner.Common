@@ -355,6 +355,13 @@ namespace FinancialPlanner.Common.Model
         UpdateTaskProject,
         [Display(Name = "Delete Task Project")]
         DeleteTaskProject,
+
+        [Display(Name = "Create ARN")]
+        CreateARN,
+        [Display(Name = "Update ARN")]
+        UpdateARN,
+        [Display(Name = "Delete ARN")]
+        DeleteARN,
     }
 
     public enum Source

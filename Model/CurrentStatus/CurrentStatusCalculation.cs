@@ -22,6 +22,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _npsDebtValue;
         double _PPFValue;
         double _EPFValue;
+        double _others;
         double _SSValue;
         double _SCSSValue;
         double _nscValue;
@@ -291,5 +292,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _debtMFValue = value;
             }
         }
+
+        public double Others { get => _others; set => _others = value; }
     }
 }
