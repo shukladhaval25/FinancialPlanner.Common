@@ -362,6 +362,13 @@ namespace FinancialPlanner.Common.Model
         UpdateARN,
         [Display(Name = "Delete ARN")]
         DeleteARN,
+
+        [Display(Name = "Create Scheme")]
+        CreateScheme,
+        [Display(Name = "Update Scheme")]
+        UpdateScheme,
+        [Display(Name = "Delete Scheme")]
+        DeleteScheme,
     }
 
     public enum Source

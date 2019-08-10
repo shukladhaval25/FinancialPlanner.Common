@@ -172,6 +172,7 @@
     <Compile Include="Model\TaskManagement\MFTransactions\AdditionalPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\ARN.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />
     <Compile Include="Model\TaskManagement\TaskType\ITaskTransactionType.cs" />
     <Compile Include="Model\TaskManagement\TaskType\SIP.cs" />
     <Compile Include="Model\TaskManagement\TaskType\SIPTransaction.cs" />
