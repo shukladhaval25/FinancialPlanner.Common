@@ -9,34 +9,34 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
     public class AdditionalPurchase : Base
     {
         int id;
-        string arn;
+        int arn;
         int cid;
         string clientGroup;
         string memberName;
         string modeOfHolding;
         string amc;
         string folioNumber;
-        string scheme;
+        int schemeId;
         string options;
         double amount;
         DateTime transactionDate;
-        int assignTo;
+        //int assignTo;
         string modeOfExecution;
         string remark;
 
         public int Id { get => id; set => id = value; }
-        public string Arn { get => arn; set => arn = value; }
+        public int Arn { get => arn; set => arn = value; }
         public int Cid { get => cid; set => cid = value; }
         public string ClientGroup { get => clientGroup; set => clientGroup = value; }
         public string MemberName { get => memberName; set => memberName = value; }
         public string ModeOfHolding { get => modeOfHolding; set => modeOfHolding = value; }
         public string Amc { get => amc; set => amc = value; }
         public string FolioNumber { get => folioNumber; set => folioNumber = value; }
-        public string Scheme { get => scheme; set => scheme = value; }
+        public int Scheme { get => schemeId; set => schemeId = value; }
         public string Options { get => options; set => options = value; }
         public double Amount { get => amount; set => amount = value; }
         public DateTime TransactionDate { get => transactionDate; set => transactionDate = value; }
-        public int AssignTo { get => assignTo; set => assignTo = value; }
+        //public int AssignTo { get => assignTo; set => assignTo = value; }
         public string ModeOfExecution { get => modeOfExecution; set => modeOfExecution = value; }
         public string Remark { get => remark; set => remark = value; }
     }

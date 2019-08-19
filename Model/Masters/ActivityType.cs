@@ -369,6 +369,13 @@ namespace FinancialPlanner.Common.Model
         UpdateScheme,
         [Display(Name = "Delete Scheme")]
         DeleteScheme,
+
+        [Display(Name = "Create Task")]
+        CreateTask,
+        [Display(Name = "Update Task")]
+        UpdateTask,
+        [Display(Name = "Delete Task")]
+        DeleteTask,
     }
 
     public enum Source
