@@ -25,12 +25,16 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         Priority priority;
         TaskStatus taskStatus;
         int owner;
-        int assignTo;
+        int? assignTo;
         int completedPercentage;
 
         DateTime actualCompletedDate;
         DateTime dueDate;
         List<string> watchers;
+        string projectName;
+        string ownerName;
+        string assignToName;
+        string customerName;
 
         public int Id { get => id; set => id = value; }
         public string TaskId { get => taskId; set => taskId = value; }
@@ -42,13 +46,17 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public Priority Priority { get => priority; set => priority = value; }
         public TaskStatus TaskStatus { get => taskStatus; set => taskStatus = value; }
         public int Owner { get => owner; set => owner = value; }
-        public int AssignTo { get => assignTo; set => assignTo = value; }
+        public int? AssignTo { get => assignTo; set => assignTo = value; }
         public int CompletedPercentage { get => completedPercentage; set => completedPercentage = value; }
         public DateTime DueDate { get => dueDate; set => dueDate = value; }
         public List<string> Watchers { get => watchers; set => watchers = value; }
         public DateTime ActualCompletedDate { get => actualCompletedDate; set => actualCompletedDate = value; }
         public string TransactionType { get => transactionType; set => transactionType = value; }
         public object TaskTransactionType { get => taskTransactionType; set => taskTransactionType = value; }
+        public string ProjectName { get => projectName; set => projectName = value; }
+        public string OwnerName { get => ownerName; set => ownerName = value; }
+        public string AssignToName { get => assignToName; set => assignToName = value; }
+        public string CustomerName { get => customerName; set => customerName = value; }
     }
 
     public class TaskTransition

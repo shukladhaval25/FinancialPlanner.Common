@@ -170,6 +170,7 @@
     <Compile Include="Model\ProspectClientConversation.cs" />
     <Compile Include="Model\Result.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\AdditionalPurchase.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\AMC.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\ARN.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />

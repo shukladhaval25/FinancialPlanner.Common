@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
 {
-    public class Scheme : Base
+    public class AMC : Base
     {
         int id;
-        int amcId;
-        string amcName;
         string name;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public int AmcId { get => amcId; set => amcId = value; }
-        public string AmcName { get => amcName; set => amcName = value; }
     }
 }
