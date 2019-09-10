@@ -9,12 +9,13 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
     public class AdditionalPurchase : Base
     {
         int id;
+        int taskId;
         int arn;
         int cid;
         string clientGroup;
         string memberName;
         string modeOfHolding;
-        string amc;
+        int amc;
         string folioNumber;
         int schemeId;
         string options;
@@ -30,7 +31,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         public string ClientGroup { get => clientGroup; set => clientGroup = value; }
         public string MemberName { get => memberName; set => memberName = value; }
         public string ModeOfHolding { get => modeOfHolding; set => modeOfHolding = value; }
-        public string Amc { get => amc; set => amc = value; }
+        public int Amc { get => amc; set => amc = value; }
         public string FolioNumber { get => folioNumber; set => folioNumber = value; }
         public int Scheme { get => schemeId; set => schemeId = value; }
         public string Options { get => options; set => options = value; }
@@ -39,5 +40,6 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         //public int AssignTo { get => assignTo; set => assignTo = value; }
         public string ModeOfExecution { get => modeOfExecution; set => modeOfExecution = value; }
         public string Remark { get => remark; set => remark = value; }
+        public int TaskId { get => taskId; set => taskId = value; }
     }
 }

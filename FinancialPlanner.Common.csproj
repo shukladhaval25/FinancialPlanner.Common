@@ -175,6 +175,7 @@
     <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SIP.cs" />
+    <Compile Include="Model\TaskManagement\TaskNotification.cs" />
     <Compile Include="Model\TaskManagement\TaskType\TransactionEnum.cs" />
     <Compile Include="Model\TaskManagement\TransactionType.cs" />
     <Compile Include="Model\RolesSecurity\EntityMaster.cs" />

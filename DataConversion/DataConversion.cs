@@ -50,9 +50,9 @@ namespace FinancialPlanner.Common.DataConversion
             {
                 using (Font arialFont = new Font("Tahoma", 10, FontStyle.Bold))
                 {
-                    graphics.DrawString(text, arialFont, Brushes.Black, new Point(8, 8));
+                    graphics.DrawString(text, arialFont, Brushes.DarkSlateGray, new Point(8, 8));
                 }
-                graphics.DrawArc(new Pen(Color.Red, 3), 90, 235, 150, 50, 0, 360);
+                graphics.DrawArc(new Pen(Color.Yellow, 3), 90, 235, 150, 50, 0, 360);
             }
             return bitmap;
             //bitmap.Save(imageFilePath);//save the image file

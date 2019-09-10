@@ -20,7 +20,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         public string Guardian { get; set; }
         public int SchemeId { get; set; }
         public string FolioNo { get; set; }
-        public string AMC { get; set; }
+        public int AMC { get; set; }
         public string Option { get; set; }
         public double Amount { get; set; }
         public string AccounType { get; set; }
