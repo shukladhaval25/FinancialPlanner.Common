@@ -70,25 +70,6 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         DateTime changeDate;        
     }
 
-    public class TaskComment
-    {
-        int id;
-        string taskId;
-        string commantedBy;
-        List<string> to;
-        List<string> cc;
-        string comment;
-        DateTime commentedOn;
-
-        public int Id { get => id; set => id = value; }
-        public string TaskId { get => taskId; set => taskId = value; }
-        public string CommantedBy { get => commantedBy; set => commantedBy = value; }
-        public List<string> To { get => to; set => to = value; }
-        public List<string> Cc { get => cc; set => cc = value; }
-        public string Comment { get => comment; set => comment = value; }
-        public DateTime CommentedOn { get => commentedOn; set => commentedOn = value; }
-    }
-
     public class TaskHistory
     {
         int id;
