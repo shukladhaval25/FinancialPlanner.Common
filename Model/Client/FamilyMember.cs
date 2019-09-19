@@ -16,6 +16,9 @@ namespace FinancialPlanner.Common.Model
         bool _isDependent;
         string _ChildrenClass;
         string _description;
+        string _pancard;
+        string _aadharCard;
+        string _occupation;
 
         public int Id
         {
@@ -120,5 +123,9 @@ namespace FinancialPlanner.Common.Model
                 _description = value;
             }
         }
+
+        public string Pancard { get => _pancard; set => _pancard = value; }
+        public string AadharCard { get => _aadharCard; set => _aadharCard = value; }
+        public string Occupation { get => _occupation; set => _occupation = value; }
     }
 }
