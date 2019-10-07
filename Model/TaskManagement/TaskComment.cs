@@ -14,14 +14,14 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         string commentedByName;
         string comment;
         DateTime commentedOn;
-        bool isEditable;
+        bool isEdited;
 
         public int Id { get => id; set => id = value; }
         public int TaskId { get => taskId; set => taskId = value; }
         public int CommantedBy { get => commantedBy; set => commantedBy = value; }
         public string Comment { get => comment; set => comment = value; }
         public DateTime CommentedOn { get => commentedOn; set => commentedOn = value; }
-        public bool IsEditable { get => isEditable; set => isEditable = value; }
+        public bool IsEdited { get => isEdited; set => isEdited = value; }
         public string CommentedByName { get => commentedByName; set => commentedByName = value; }
     }
 }

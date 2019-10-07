@@ -138,6 +138,7 @@
     <Compile Include="Model\CurrentStatus\SukanyaSamrudhi.cs" />
     <Compile Include="Model\CurrentStatus\ULIP.cs" />
     <Compile Include="Model\Masters\Area.cs" />
+    <Compile Include="Model\Masters\Bank.cs" />
     <Compile Include="Model\Masters\ClientRating.cs" />
     <Compile Include="Model\Masters\Comapny.cs" />
     <Compile Include="Model\Masters\EmailArticle.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialPlanner.Common.Model.Masters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,19 @@ namespace FinancialPlanner.Common.Model
     {
         int id;
         int accountHolderId;
-        string bankName;
+        int bankId;
         string accountNo;
-        string accountType;
-        string branchAddress;
-        string branchContantNo;
+        Bank bank;
+        //string branchAddress;
+        //string branchContantNo;
 
         public int Id { get => id; set => id = value; }
+        public int BankId { get => bankId; set => bankId = value; }
         public int AccountHolderId { get => accountHolderId; set => accountHolderId = value; }
-        public string BankName { get => bankName; set => bankName = value; }
         public string AccountNo { get => accountNo; set => accountNo = value; }
-        public string AccountType { get => accountType; set => accountType = value; }
-        public string BranchAddress { get => branchAddress; set => branchAddress = value; }
-        public string BranchContantNo { get => branchContantNo; set => branchContantNo = value; }
+        public string AccountType { get; set; }
+        public Bank Bank { get => bank; set => bank = value; }
+        //public string BranchAddress { get => branchAddress; set => branchAddress = value; }
+        //public string BranchContantNo { get => branchContantNo; set => branchContantNo = value; }
     }
 }
