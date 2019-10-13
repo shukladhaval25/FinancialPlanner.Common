@@ -177,6 +177,8 @@
     <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SIP.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\STP.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\SwitchOpt.cs" />
     <Compile Include="Model\TaskManagement\TaskComment.cs" />
     <Compile Include="Model\TaskManagement\TaskNotification.cs" />
     <Compile Include="Model\TaskManagement\TaskType\TransactionEnum.cs" />
