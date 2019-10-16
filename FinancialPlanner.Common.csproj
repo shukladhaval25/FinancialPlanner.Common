@@ -178,6 +178,7 @@
     <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SIP.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\STP.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\STPCancellation.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SwitchOpt.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SWP.cs" />
     <Compile Include="Model\TaskManagement\TaskComment.cs" />
