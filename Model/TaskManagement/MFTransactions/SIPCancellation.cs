@@ -22,7 +22,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         DateTime sipStartDate;
         DateTime sipEndDate;
         int sipDate;
-        int BankId;
+        int bankId;
         string accountNo;
         string modeOfExecution;
         string remark;
@@ -41,7 +41,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         public DateTime SipStartDate { get => sipStartDate; set => sipStartDate = value; }
         public DateTime SipEndDate { get => sipEndDate; set => sipEndDate = value; }
         public int SipDate { get => sipDate; set => sipDate = value; }
-        public int BankId1 { get => BankId; set => BankId = value; }
+        public int BankId { get { return bankId; } set { bankId = value; } }
         public string AccountNo { get => accountNo; set => accountNo = value; }
         public string ModeOfExecution { get => modeOfExecution; set => modeOfExecution = value; }
         public string Remark { get => remark; set => remark = value; }
