@@ -315,6 +315,11 @@ namespace FinancialPlanner.Common.Model
         [Display(Name ="Create Area")]
         CreateArea,
 
+        [Display(Name = "Delete Scheme Category")]
+        DeleteSchemeCategory,
+        [Display(Name = "Create Scheme Category")]
+        CreateSchemeCategory,
+
 
         [Display(Name = "Delete Organisation type")]
         DeleteOrganisationType,
@@ -382,6 +387,12 @@ namespace FinancialPlanner.Common.Model
         CreateAMC,
         [Display(Name = "Edit AMC")]
         UpdateAMC,
+        [Display(Name ="Investment Recomendation")]
+        CreateInvestmentRecommendation,
+        [Display(Name = "Update Recomendation")]
+        UpdateInvestmentRecommendation,
+        [Display(Name = "Delete Recomendation")]
+        DeleteInvestmentRecommendation
     }
 
     public enum Source
