@@ -149,6 +149,7 @@
     <Compile Include="Model\Masters\OrganisationType.cs" />
     <Compile Include="Model\Masters\SchemeCategory.cs" />
     <Compile Include="Model\PlannerProcess\ProcessAction.cs" />
+    <Compile Include="Model\Planner\LumsumInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\Planner.cs" />
     <Compile Include="Model\Planner\AssumptionMaster.cs" />
     <Compile Include="Model\Planner\Document.cs" />
@@ -159,6 +160,8 @@
     <Compile Include="Model\Planner\LoanForGoal.cs" />
     <Compile Include="Model\Planner\NonFinancialAsset.cs" />
     <Compile Include="Model\Planner\PlannerAssumption.cs" />
+    <Compile Include="Model\Planner\SIPTypeInvestmentRecomendation.cs" />
+    <Compile Include="Model\Planner\STPTypeInvestmentRecomendation.cs" />
     <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\PlanOptions\InvestmentRecommendation.cs" />
     <Compile Include="Model\ProcessAction\PlannerProcess.cs" />

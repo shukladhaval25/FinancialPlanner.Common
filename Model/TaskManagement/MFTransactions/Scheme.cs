@@ -13,11 +13,13 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         string amcName;
         string name;
         int categoryId;
+        string chequeInFavourOff;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int AmcId { get => amcId; set => amcId = value; }
         public string AmcName { get => amcName; set => amcName = value; }
         public int CategoryId { get => categoryId; set => categoryId = value; }
+        public string ChequeInFavourOff { get => chequeInFavourOff; set => chequeInFavourOff = value; }
     }
 }
