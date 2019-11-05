@@ -149,6 +149,7 @@
     <Compile Include="Model\Masters\OrganisationType.cs" />
     <Compile Include="Model\Masters\SchemeCategory.cs" />
     <Compile Include="Model\PlannerProcess\ProcessAction.cs" />
+    <Compile Include="Model\Planner\InvestmentRecommendationRatio.cs" />
     <Compile Include="Model\Planner\LumsumInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\Planner.cs" />
     <Compile Include="Model\Planner\AssumptionMaster.cs" />

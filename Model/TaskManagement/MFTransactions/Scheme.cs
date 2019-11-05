@@ -14,6 +14,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         string name;
         int categoryId;
         string chequeInFavourOff;
+        string type;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -21,5 +22,6 @@ namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
         public string AmcName { get => amcName; set => amcName = value; }
         public int CategoryId { get => categoryId; set => categoryId = value; }
         public string ChequeInFavourOff { get => chequeInFavourOff; set => chequeInFavourOff = value; }
+        public string Type { get => type; set => type = value; }
     }
 }

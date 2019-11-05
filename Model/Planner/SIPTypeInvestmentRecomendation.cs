@@ -18,6 +18,7 @@ namespace FinancialPlanner.Common.Model
         string chequeInFavourOff;
         string firstHolder;
         string secondHolder;
+        string type;
 
         public int Id { get => id; set => id = value; }
         public int Pid { get => pid; set => pid = value; }
@@ -29,5 +30,6 @@ namespace FinancialPlanner.Common.Model
         public string ChequeInFavourOff { get => chequeInFavourOff; set => chequeInFavourOff = value; }
         public string FirstHolder { get => firstHolder; set => firstHolder = value; }
         public string SecondHolder { get => secondHolder; set => secondHolder = value; }
+        public string Type { get => type; set => type = value; }
     }
 }
