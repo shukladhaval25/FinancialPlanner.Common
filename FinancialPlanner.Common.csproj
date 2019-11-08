@@ -180,6 +180,11 @@
     <Compile Include="Model\TaskManagement\MFTransactions\AdditionalPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\AMC.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\ARN.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\BankChangeRequest.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\AddressChange.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\TransmissionAfterDeath.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\PANCardUpdate.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\ContactUpdate.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\FreshPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Scheme.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SIP.cs" />

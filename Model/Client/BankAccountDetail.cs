@@ -19,7 +19,7 @@ namespace FinancialPlanner.Common.Model
         bool _isJoinAccount;
         string _joinHolderName;
         double _minRequireBalance;
-
+        int _bankAccountId;
 
         public int Id
         {
@@ -164,5 +164,7 @@ namespace FinancialPlanner.Common.Model
                 _minRequireBalance = value;
             }
         }
+
+        public int BankId { get => _bankAccountId; set => _bankAccountId = value; }
     }
 }
