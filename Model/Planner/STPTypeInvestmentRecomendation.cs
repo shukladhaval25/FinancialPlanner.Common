@@ -18,6 +18,7 @@ namespace FinancialPlanner.Common.Model
         double amount;
         int duration;
         string frequency;
+        double lumsumAmount;
 
         public int Id { get => id; set => id = value; }
         public int Pid { get => pid; set => pid = value; }
@@ -29,5 +30,6 @@ namespace FinancialPlanner.Common.Model
         public double Amount { get => amount; set => amount = value; }
         public int Duration { get => duration; set => duration = value; }
         public string Frequency { get => frequency; set => frequency = value; }
+        public double LumsumAmount { get => lumsumAmount; set => lumsumAmount = value; }
     }
 }

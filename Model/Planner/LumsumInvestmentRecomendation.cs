@@ -19,6 +19,7 @@ namespace FinancialPlanner.Common.Model
         string firstHolder;
         string secondHolder;
         string type;
+        string amc;
 
         public int Pid { get => pid; set => pid = value; }
         public int Cid { get => cid; set => cid = value; }
@@ -31,5 +32,6 @@ namespace FinancialPlanner.Common.Model
         public string SchemeName { get => schemeName; set => schemeName = value; }
         public string Category { get => category; set => category = value; }
         public string Type { get => type; set => type = value; }
+        public string AMC { get => amc; set => amc = value; }
     }
 }
