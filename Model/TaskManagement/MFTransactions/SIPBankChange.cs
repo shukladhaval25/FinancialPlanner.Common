@@ -6,28 +6,40 @@ using System.Threading.Tasks;
 
 namespace FinancialPlanner.Common.Model.TaskManagement.MFTransactions
 {
-    public class SignatureChange
+    public class SIPBankChange : Base
     {
         int id;
         int taskId;
         int arn;
         int cid;
         string clientGroup;
-        string folioNumber;
         string memberName;
         int amc;
-        string signatureChangeOf;
+        string folioNumber;
+        int schemeId;
+        string options;
+        double amount;
+        int newBankId;
+        string newBankName;
+        string newBankAccountNo;
         string modeOfExecution;
+        string remark;
 
         public int Id { get => id; set => id = value; }
-        public int TaskId { get => taskId; set => taskId = value; }
         public int Arn { get => arn; set => arn = value; }
         public int Cid { get => cid; set => cid = value; }
         public string ClientGroup { get => clientGroup; set => clientGroup = value; }
         public string MemberName { get => memberName; set => memberName = value; }
         public int Amc { get => amc; set => amc = value; }
         public string FolioNumber { get => folioNumber; set => folioNumber = value; }
-        public string SignatureChangeOf { get => signatureChangeOf; set => signatureChangeOf = value; }
+        public int Scheme { get => schemeId; set => schemeId = value; }
+        public string Options { get => options; set => options = value; }
+        public double Amount { get => amount; set => amount = value; }
         public string ModeOfExecution { get => modeOfExecution; set => modeOfExecution = value; }
+        public string Remark { get => remark; set => remark = value; }
+        public int TaskId { get => taskId; set => taskId = value; }
+        public int NewBankId { get => newBankId; set => newBankId = value; }
+        public string NewBankName { get => newBankName; set => newBankName = value; }
+        public string NewBankAccountNo { get => newBankAccountNo; set => newBankAccountNo = value; }
     }
 }

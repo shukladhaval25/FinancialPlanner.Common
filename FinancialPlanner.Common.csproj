@@ -178,6 +178,7 @@
     <Compile Include="Model\ProspectClient.cs" />
     <Compile Include="Model\ProspectClientConversation.cs" />
     <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\TaskManagement\MFTransactions\SIPBankChange.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\AdditionalPurchase.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\SignatureChange.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\AMC.cs" />
