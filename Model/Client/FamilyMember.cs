@@ -12,7 +12,7 @@ namespace FinancialPlanner.Common.Model
         int _cid;
         string _name;
         string _relationship;
-        DateTime _dob;
+        DateTime? _dob;
         bool _isDependent;
         string _ChildrenClass;
         string _description;
@@ -72,7 +72,7 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public DateTime DOB
+        public DateTime? DOB
         {
             get
             {

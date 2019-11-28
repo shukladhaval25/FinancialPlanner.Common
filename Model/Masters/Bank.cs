@@ -17,6 +17,7 @@ namespace FinancialPlanner.Common.Model.Masters
         int? pincode;
         string ifsc;
         string micr;
+        string country;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -27,5 +28,6 @@ namespace FinancialPlanner.Common.Model.Masters
         public string IFSC { get => ifsc; set => ifsc = value; }
         public string MICR { get => micr; set => micr = value; }
         public string State { get => state; set => state = value; }
+        public string Country { get => country; set => country = value; }
     }
 }

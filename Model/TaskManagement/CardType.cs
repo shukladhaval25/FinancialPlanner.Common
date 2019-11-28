@@ -24,8 +24,8 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         Backlog,
         InProgress,
         Blocked,
-        Completed,       
-        Rejected,
+        Complete,       
+        Discard,
         Close
     }
     public enum OperationType

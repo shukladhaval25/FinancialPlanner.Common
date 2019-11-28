@@ -23,6 +23,7 @@ namespace FinancialPlanner.Common.Model
         string _primaryEmail;
         string _primaryMobile;
         string _preferedTime;
+        string _country;
         
         public int Id
         {
@@ -211,5 +212,7 @@ namespace FinancialPlanner.Common.Model
                 _preferedTime = value;
             }
         }
+
+        public string Country { get => _country; set => _country = value; }
     }
 }

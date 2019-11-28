@@ -73,13 +73,21 @@ namespace FinancialPlanner.Common.Model.TaskManagement
     public class TaskHistory
     {
         int id;
-        string taskId;
-        OperationType operation;
-        string previousValue;
-        string changeValue;
-        string changeBy;
-        DateTime changedOn;
-        TaskCard taskCard = new TaskCard();
-        string jsonStr;
+        int taskId;
+        string fieldName;
+        string oldValue;
+        string newValue;
+        string username;
+        int updatedBy;
+        DateTime updatedOn;
+
+        public int Id { get => id; set => id = value; }
+        public int TaskId { get => taskId; set => taskId = value; }
+        public string FieldName { get => fieldName; set => fieldName = value; }
+        public string OldValue { get => oldValue; set => oldValue = value; }
+        public string NewValue { get => newValue; set => newValue = value; }
+        public string Username { get => username; set => username = value; }
+        public int UpdatedBy { get => updatedBy; set => updatedBy = value; }
+        public DateTime UpdatedOn { get => updatedOn; set => updatedOn = value; }
     }
 }
