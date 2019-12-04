@@ -211,6 +211,10 @@
     <Compile Include="Model\TaskManagement\CardType.cs" />
     <Compile Include="Model\TaskManagement\Project.cs" />
     <Compile Include="Model\TaskManagement\TaskCard.cs" />
+    <Compile Include="Model\TaskManagement\UserPerformanceOnTask.cs" />
+    <Compile Include="Permission\Forms.cs" />
+    <Compile Include="Permission\Role.cs" />
+    <Compile Include="Permission\RolePermission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestAPIExecutor.cs" />
     <Compile Include="SerializationFactory.cs" />
