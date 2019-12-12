@@ -11,7 +11,7 @@ namespace FinancialPlanner.Common.Permission
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsCutomRole { get; set; }
+        public bool IsCustomRole { get; set; }
         public IList<RolePermission> Permissions { get; set; }
     }
 }
