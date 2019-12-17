@@ -35,6 +35,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         string ownerName;
         string assignToName;
         string customerName;
+        string otherName;
 
         public int Id { get => id; set => id = value; }
         public string TaskId { get => taskId; set => taskId = value; }
@@ -57,6 +58,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public string OwnerName { get => ownerName; set => ownerName = value; }
         public string AssignToName { get => assignToName; set => assignToName = value; }
         public string CustomerName { get => customerName; set => customerName = value; }
+        public string OtherName { get => otherName; set => otherName = value; }
     }
 
     public class TaskTransition

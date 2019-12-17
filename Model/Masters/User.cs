@@ -13,12 +13,14 @@ namespace FinancialPlanner.Common.Model
         private string _firstName;
         private string _lastName;
         private string _pwd;
+        private int _roleId;
         //private DateTime _createdOn;
         //private int _createdBy;
         //private DateTime _updatedOn;
         //private int _updatedBy;
         private string _createdByUserName;
         private string _updatedByUserName;
+        private bool _isDeleted = false;
 
         public int Id
         {
@@ -86,5 +88,8 @@ namespace FinancialPlanner.Common.Model
             get { return _updatedByUserName; }
             set { _updatedByUserName = value; }
         }
+
+        public int RoleId { get => _roleId; set => _roleId = value; }
+        public bool IsDeleted { get => _isDeleted; set => _isDeleted = value; }
     }
 }
