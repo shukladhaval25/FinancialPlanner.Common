@@ -18,6 +18,7 @@ namespace FinancialPlanner.Common.Model
         string chequeInFavourOff;
         string firstHolder;
         string secondHolder;
+        string thirdHolder;
         string type;
         string amc;
 
@@ -28,6 +29,7 @@ namespace FinancialPlanner.Common.Model
         public string ChequeInFavourOff { get => chequeInFavourOff; set => chequeInFavourOff = value; }
         public string FirstHolder { get => firstHolder; set => firstHolder = value; }
         public string SecondHolder { get => secondHolder; set => secondHolder = value; }
+        public string ThirdHolder { get => thirdHolder; set => thirdHolder = value; }
         public int Id { get => id; set => id = value; }
         public string SchemeName { get => schemeName; set => schemeName = value; }
         public string Category { get => category; set => category = value; }

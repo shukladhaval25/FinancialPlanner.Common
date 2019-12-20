@@ -294,5 +294,12 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         }
 
         public double Others { get => _others; set => _others = value; }
+        public double Total
+        {
+            get
+            {
+                return _shresValue + _equityMFvalue + _npsEquityValue + _otherEquityValue + _fdValue + _rdValue + _saValue + _debtMFValue + _npsDebtValue + _PPFValue + _EPFValue + _others + _SSValue + _SCSSValue + _nscValue + _bondsValue + _otherDebtValue + _goldValue + _othersGoldValue;
+            }
+        }
     }
 }
