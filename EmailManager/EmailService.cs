@@ -1,6 +1,9 @@
 ﻿using Chilkat;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
 
 namespace FinancialPlanner.Common.EmailManager
 {
@@ -18,8 +21,7 @@ namespace FinancialPlanner.Common.EmailManager
             MailServer.IsSSL = isSSL;
             MailServer.FromEmail = fromEmail;
             MailServer.POP3_IMPS_HostName = impsHost;
-            MailServer.POP3_IMPS_HostPort = impsPort;
-            
+            MailServer.POP3_IMPS_HostPort = impsPort;            
         }
         public IList<Email> GetAllMails(string fromEmailID)
         {
@@ -161,6 +163,29 @@ namespace FinancialPlanner.Common.EmailManager
         {
             return !string.IsNullOrEmpty(MailServer.HostName) &&
                !string.IsNullOrEmpty(MailServer.HostPort.ToString()) && !string.IsNullOrEmpty(MailServer.Password);
+        }
+
+        public static bool SendEmail(MailMessage mailMessage)
+        {
+            try
+            {              
+                SmtpClient smtp = new SmtpClient();
+              
+                mailMessage.From = new MailAddress(MailServer.FromEmail);
+                smtp.Port = MailServer.HostPort;
+                smtp.Host = MailServer.HostName;
+                smtp.EnableSsl = MailServer.IsSSL;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential(MailServer.UserName, MailServer.Password);
+                
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(mailMessage);
+                
+                return true;
+            }
+            catch (Exception ex) {
+                return false;
+            }
         }
     }    
 }

@@ -22,7 +22,7 @@ namespace FinancialPlanner.Common.Model
         string _assetRealisationYear;
         string _descryption;
         decimal _growthPercentage;
-
+        public bool EligibleForInsuranceCover { get; set; }
         public int Id
         {
             get
