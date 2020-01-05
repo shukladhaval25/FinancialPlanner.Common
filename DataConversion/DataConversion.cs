@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -37,6 +39,8 @@ namespace FinancialPlanner.Common.DataConversion
 
             return dataTable;
         }
+
+     
     }
 
     public static class FPImage
@@ -56,6 +60,42 @@ namespace FinancialPlanner.Common.DataConversion
             }
             return bitmap;
             //bitmap.Save(imageFilePath);//save the image file
+        }
+    }
+    public static class FileConversion
+    {
+        public static string GetStringfromFile(string filePath)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(filePath))
+                {
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                        byte[] filebytes = new byte[fs.Length];
+                        fs.Read(filebytes, 0, Convert.ToInt32(fs.Length));
+                        return Convert.ToBase64String(filebytes,
+                                                      Base64FormattingOptions.InsertLineBreaks);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                StackTrace st = new StackTrace();
+                StackFrame sf = st.GetFrame(0);
+                MethodBase currentMethodName = sf.GetMethod();
+                LogDebug(currentMethodName.Name, ex);
+            }
+            return null;
+        }
+        private static void LogDebug(string methodName, Exception ex)
+        {
+            DebuggerLogInfo debuggerInfo = new DebuggerLogInfo();
+            debuggerInfo.ClassName = "DataConversion";
+            debuggerInfo.Method = methodName;
+            debuggerInfo.ExceptionInfo = ex;
+            Logger.LogDebug(debuggerInfo);
         }
     }
 }

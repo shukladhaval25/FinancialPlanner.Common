@@ -166,6 +166,7 @@
     <Compile Include="Model\Planner\STPTypeInvestmentRecomendation.cs" />
     <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\PlanOptions\InvestmentRecommendation.cs" />
+    <Compile Include="Model\PlanOptions\InvRecommendationSend.cs" />
     <Compile Include="Model\ProcessAction\PlannerProcess.cs" />
     <Compile Include="Model\RiskProfile\InvestmentSegment.cs" />
     <Compile Include="Model\RiskProfile\RecommendedSchemes.cs" />
