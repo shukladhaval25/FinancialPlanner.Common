@@ -102,6 +102,7 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Model\Client\ClientARN.cs" />
     <Compile Include="Model\Client\FamilyMemberBank.cs" />
+    <Compile Include="Model\Client\Sessions.cs" />
     <Compile Include="Model\CurrentStatus\CurrentStatusInstrument.cs" />
     <Compile Include="Model\CurrentStatus\EPF.cs" />
     <Compile Include="Model\CurrentStatus\Others.cs" />
@@ -164,10 +165,12 @@
     <Compile Include="Model\Planner\PlannerAssumption.cs" />
     <Compile Include="Model\Planner\SIPTypeInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\STPTypeInvestmentRecomendation.cs" />
+    <Compile Include="Model\Planner\SwitchTypeInvestmentRecommendation.cs" />
     <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\PlanOptions\InvestmentRecommendation.cs" />
     <Compile Include="Model\PlanOptions\InvRecommendationSend.cs" />
     <Compile Include="Model\ProcessAction\PlannerProcess.cs" />
+    <Compile Include="Model\QuarterlyReviewTemplate.cs" />
     <Compile Include="Model\RiskProfile\InvestmentSegment.cs" />
     <Compile Include="Model\RiskProfile\RecommendedSchemes.cs" />
     <Compile Include="Model\RiskProfile\RiskProfiledReturn.cs" />

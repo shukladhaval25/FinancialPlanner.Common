@@ -392,7 +392,12 @@ namespace FinancialPlanner.Common.Model
         [Display(Name = "Update Recomendation")]
         UpdateInvestmentRecommendation,
         [Display(Name = "Delete Recomendation")]
-        DeleteInvestmentRecommendation
+        DeleteInvestmentRecommendation,
+
+        [Display(Name = "Update Quarterly Review Template")]
+        UpdateQuarterlyReviewTemplate,
+        CreateSessions,
+        DeleteSessions
     }
 
     public enum Source

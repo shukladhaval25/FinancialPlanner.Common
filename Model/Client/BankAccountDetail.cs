@@ -20,6 +20,7 @@ namespace FinancialPlanner.Common.Model
         string _joinHolderName;
         double _minRequireBalance;
         int _bankAccountId;
+        string _nominee;
 
         public int Id
         {
@@ -166,5 +167,6 @@ namespace FinancialPlanner.Common.Model
         }
 
         public int BankId { get => _bankAccountId; set => _bankAccountId = value; }
+        public string Nominee { get => _nominee; set => _nominee = value; }
     }
 }
