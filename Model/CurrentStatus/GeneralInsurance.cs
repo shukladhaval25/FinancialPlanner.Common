@@ -13,7 +13,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         string _applicant;
         DateTime? _issueDate;
         int _termsInYears;
-        DateTime? _maturityDate;
+        DateTime? _renewalDate;
         string _policyNo;
         string _compnay;
         string _policy;
@@ -89,16 +89,16 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
             }
         }
 
-        public DateTime? MaturityDate
+        public DateTime? RenewalDate
         {
             get
             {
-                return _maturityDate;
+                return _renewalDate;
             }
 
             set
             {
-                _maturityDate = value;
+                _renewalDate = value;
             }
         }
 
