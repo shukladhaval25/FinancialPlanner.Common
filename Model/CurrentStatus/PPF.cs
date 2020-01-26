@@ -18,6 +18,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _currentValue;
         int? _goalId;
         float _investmentReturnRate;
+        bool _isAccountExtended;
 
         public int Id
         {
@@ -147,5 +148,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _investmentReturnRate = value;
             }
         }
+
+        public bool IsAccountExtended { get => _isAccountExtended; set => _isAccountExtended = value; }
     }
 }

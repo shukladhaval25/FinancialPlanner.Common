@@ -171,6 +171,7 @@
     <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\PlanOptions\InvestmentRecommendation.cs" />
     <Compile Include="Model\PlanOptions\InvRecommendationSend.cs" />
+    <Compile Include="Model\PPFMaturity.cs" />
     <Compile Include="Model\ProcessAction\PlannerProcess.cs" />
     <Compile Include="Model\QuarterlyReviewTemplate.cs" />
     <Compile Include="Model\RiskProfile\InvestmentSegment.cs" />
