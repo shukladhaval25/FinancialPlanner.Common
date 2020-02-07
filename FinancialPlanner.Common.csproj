@@ -208,6 +208,7 @@
     <Compile Include="Model\TaskManagement\MFTransactions\SWP.cs" />
     <Compile Include="Model\TaskManagement\TaskComment.cs" />
     <Compile Include="Model\TaskManagement\TaskNotification.cs" />
+    <Compile Include="Model\TaskManagement\TaskReminder.cs" />
     <Compile Include="Model\TaskManagement\TaskType\TransactionEnum.cs" />
     <Compile Include="Model\TaskManagement\TransactionType.cs" />
     <Compile Include="Model\RolesSecurity\EntityMaster.cs" />

@@ -43,6 +43,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _rider2Amount;
         string _remarks;
         string _attachmentPath;
+        DateTime? _lastPremiumDate;
 
         public int Id
         {
@@ -491,5 +492,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _attachmentPath = value;
             }
         }
+
+        public DateTime? LastPremiumDate { get => _lastPremiumDate; set => _lastPremiumDate = value; }
     }
 }
