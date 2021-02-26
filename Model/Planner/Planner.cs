@@ -41,7 +41,7 @@ namespace FinancialPlanner.Common.Model
         }
         public DateTime EndDate
         {
-            get { return _startDate.AddYears(1); }
+            get { return _startDate.AddYears(1).AddDays(-1); }
         }
         public bool IsActive
         {

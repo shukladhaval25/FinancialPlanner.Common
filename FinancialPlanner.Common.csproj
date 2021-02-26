@@ -101,6 +101,7 @@
     <Compile Include="JSONSerialization.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Model\Client\ClientARN.cs" />
+    <Compile Include="Model\Client\ClientPrimaryContact.cs" />
     <Compile Include="Model\Client\FamilyMemberBank.cs" />
     <Compile Include="Model\Client\Sessions.cs" />
     <Compile Include="Model\CurrentStatus\CurrentStatusInstrument.cs" />

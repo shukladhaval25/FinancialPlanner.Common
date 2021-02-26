@@ -14,6 +14,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _equityMFvalue;
         double _npsEquityValue;
         double _otherEquityValue;
+        double _ulipEquityValue;
 
         double _fdValue;
         double _rdValue;
@@ -28,7 +29,8 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _nscValue;
         double _bondsValue;
         double _otherDebtValue;
-
+        double _ulipDebtValue;
+        
         double _goldValue;
         double _othersGoldValue;
         bool _isGoalMapDataExcluded = true;
@@ -298,8 +300,11 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         {
             get
             {
-                return _shresValue + _equityMFvalue + _npsEquityValue + _otherEquityValue + _fdValue + _rdValue + _saValue + _debtMFValue + _npsDebtValue + _PPFValue + _EPFValue + _others + _SSValue + _SCSSValue + _nscValue + _bondsValue + _otherDebtValue + _goldValue + _othersGoldValue;
+                return _shresValue + _equityMFvalue + _npsEquityValue + _otherEquityValue + _fdValue + _rdValue + _saValue + _debtMFValue + _npsDebtValue + _PPFValue + _EPFValue + _others + _SSValue + _SCSSValue + _nscValue + _bondsValue + _otherDebtValue + _goldValue + _othersGoldValue + UlipEquityValue + UlipDebtValue;
             }
         }
+
+        public double UlipDebtValue { get => _ulipDebtValue; set => _ulipDebtValue = value; }
+        public double UlipEquityValue { get => _ulipEquityValue; set => _ulipEquityValue = value; }
     }
 }

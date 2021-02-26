@@ -168,17 +168,19 @@ namespace FinancialPlanner.Common.EmailManager
         public static bool SendEmail(MailMessage mailMessage)
         {
             try
-            {              
-                SmtpClient smtp = new SmtpClient();
-              
-                mailMessage.From = new MailAddress(MailServer.FromEmail);
-                smtp.Port = MailServer.HostPort;
-                smtp.Host = MailServer.HostName;
-                smtp.EnableSsl = MailServer.IsSSL;
-                smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential(MailServer.UserName, MailServer.Password);
-                
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            {
+                var smtp = new System.Net.Mail.SmtpClient();
+                {
+                    mailMessage.From = new MailAddress(MailServer.FromEmail);
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Port = MailServer.HostPort;
+                    smtp.Host = MailServer.HostName;
+                    smtp.EnableSsl = MailServer.IsSSL;
+                    smtp.UseDefaultCredentials = false;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtp.Credentials = new NetworkCredential(MailServer.UserName, MailServer.Password);
+                    smtp.Timeout = 30000;                    
+                }
                 smtp.Send(mailMessage);
                 
                 return true;

@@ -18,6 +18,8 @@ namespace FinancialPlanner.Common.Model
         string endYear;
         string _description;
         float _incomeTax;
+        string _expectedGrowthType ="P";
+        double _expectedGrwothInAmount = 0;
         SalaryDetail _salaryDetail;
 
         public int Id
@@ -154,5 +156,8 @@ namespace FinancialPlanner.Common.Model
             get { return _incomeTax; }
             set { _incomeTax = value; }
         }
+
+        public string ExpectedGrowthType { get => _expectedGrowthType; set => _expectedGrowthType = value; }
+        public double ExpectedGrwothInAmount { get => _expectedGrwothInAmount; set => _expectedGrwothInAmount = value; }
     }
 }
