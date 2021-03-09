@@ -171,6 +171,7 @@
     <Compile Include="Model\Planner\SIPTypeInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\STPTypeInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\SwitchTypeInvestmentRecommendation.cs" />
+    <Compile Include="Model\PlanOptions\ContingencyFund.cs" />
     <Compile Include="Model\PlanOptions\CurrentStatusToGoal.cs" />
     <Compile Include="Model\PlanOptions\InvestmentRecommendation.cs" />
     <Compile Include="Model\PlanOptions\InvRecommendationSend.cs" />
