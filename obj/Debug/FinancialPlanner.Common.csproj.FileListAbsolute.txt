@@ -25,3 +25,4 @@ C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Comm
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.csproj.CopyComplete
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.dll
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.pdb
+C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.csprojAssemblyReference.cache

@@ -158,6 +158,7 @@
     <Compile Include="Model\PlannerProcess\ProcessAction.cs" />
     <Compile Include="Model\Planner\InvestmentRecommendationRatio.cs" />
     <Compile Include="Model\Planner\LumsumInvestmentRecomendation.cs" />
+    <Compile Include="Model\Planner\NetWorth.cs" />
     <Compile Include="Model\Planner\Planner.cs" />
     <Compile Include="Model\Planner\AssumptionMaster.cs" />
     <Compile Include="Model\Planner\Document.cs" />
