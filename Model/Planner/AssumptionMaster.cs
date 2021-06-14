@@ -20,6 +20,7 @@ namespace FinancialPlanner.Common.Model
         decimal _ongoingExpRise;
         decimal _nonFinancialRateOfReturn;
         decimal _postRetirementInvestmentReturnRate;
+        decimal _insuranceReturnRate;
        
         
 
@@ -35,5 +36,6 @@ namespace FinancialPlanner.Common.Model
         public decimal OngoingExpRise { get => _ongoingExpRise; set => _ongoingExpRise = value; }
         public decimal IncomeRaiseRatio { get => _incomeRaiseRatio; set => _incomeRaiseRatio = value; }
         public decimal PostRetirementInvestmentReturnRate { get => _postRetirementInvestmentReturnRate; set => _postRetirementInvestmentReturnRate = value; }
+        public decimal InsuranceReturnRate { get => _insuranceReturnRate; set => _insuranceReturnRate = value; }
     }
 }

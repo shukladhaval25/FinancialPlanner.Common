@@ -27,6 +27,8 @@ namespace FinancialPlanner.Common.Model
         private string _rating;
         private string _clientType;
         private string _resiStatus;
+        private bool _isActive;
+        private string _note;
         public int ID
         {
             get { return _id; }
@@ -111,5 +113,7 @@ namespace FinancialPlanner.Common.Model
         public string Rating { get => _rating; set => _rating = value; }
         public string ClientType { get => _clientType; set => _clientType = value; }
         public string ResiStatus { get => _resiStatus; set => _resiStatus = value; }
+        public bool IsActive { get => _isActive; set => _isActive = value; }
+        public string Note { get => _note; set => _note = value; }
     }
 }

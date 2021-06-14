@@ -19,6 +19,7 @@ namespace FinancialPlanner.Common.Model
         string _pancard;
         string _aadharCard;
         string _occupation;
+        bool _isHuf;
 
         public int Id
         {
@@ -127,5 +128,6 @@ namespace FinancialPlanner.Common.Model
         public string Pancard { get => _pancard; set => _pancard = value; }
         public string AadharCard { get => _aadharCard; set => _aadharCard = value; }
         public string Occupation { get => _occupation; set => _occupation = value; }
+        public bool IsHuf { get => _isHuf; set => _isHuf = value; }
     }
 }
