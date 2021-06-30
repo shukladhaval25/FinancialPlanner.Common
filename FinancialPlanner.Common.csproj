@@ -190,6 +190,8 @@
     <Compile Include="Model\ProspectClient.cs" />
     <Compile Include="Model\ProspectClientConversation.cs" />
     <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\ScoreCalculation\Score.cs" />
+    <Compile Include="Model\ScoreCalculation\ScoreEntry.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\ChangeOfName.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Nomination.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\MinorToMajor.cs" />
