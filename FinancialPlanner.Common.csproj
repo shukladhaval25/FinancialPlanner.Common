@@ -76,9 +76,8 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>obj\Debug\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\FinancialPlanner\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -98,12 +97,14 @@
     <Compile Include="EmailManager\EmailService.cs" />
     <Compile Include="EmailManager\MailServer.cs" />
     <Compile Include="ExportExcel.cs" />
+    <Compile Include="Model\FeesInvoice.cs" />
     <Compile Include="ISerialization.cs" />
     <Compile Include="JSONSerialization.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Model\Client\ClientARN.cs" />
     <Compile Include="Model\Client\ClientPrimaryContact.cs" />
     <Compile Include="Model\Client\FamilyMemberBank.cs" />
+    <Compile Include="Model\Client\MOM.cs" />
     <Compile Include="Model\Client\Sessions.cs" />
     <Compile Include="Model\CurrentStatus\CurrentStatusInstrument.cs" />
     <Compile Include="Model\CurrentStatus\EPF.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Model\Masters\EmailGroup.cs" />
     <Compile Include="Model\Masters\EmailScheduler.cs" />
     <Compile Include="Model\Client\PersonalInformation.cs" />
+    <Compile Include="Model\Masters\ImageBank.cs" />
     <Compile Include="Model\Masters\OrganisationType.cs" />
     <Compile Include="Model\Masters\SchemeCategory.cs" />
     <Compile Include="Model\MinutesOfMeeting.cs" />

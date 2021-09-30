@@ -15,6 +15,6 @@ namespace FinancialPlanner.Common.EmailManager
         public static bool IsSSL { get; set; }
         public static string FromEmail { get; set; }
         public static string POP3_IMPS_HostName { get; set; }
-        public static string POP3_IMPS_HostPort { get; set; }
+        public static int POP3_IMPS_HostPort { get; set; }
     }
 }

@@ -18,6 +18,8 @@ namespace FinancialPlanner.Common.Model
         private string _description;
         private bool _isDeleted = false;
         private string _reviewFrequency;
+        public string Recommendation { get; set; }
+        public string CurrencySymbol { get; set; }
 
         public int ID
         {

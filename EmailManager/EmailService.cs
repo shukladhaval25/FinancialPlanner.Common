@@ -1,13 +1,10 @@
 ﻿using Chilkat;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Mail;
-using System.Net.Security;
 using System.Security.Authentication;
-using System.Security.Cryptography.X509Certificates;
 
 namespace FinancialPlanner.Common.EmailManager
 {
@@ -16,8 +13,8 @@ namespace FinancialPlanner.Common.EmailManager
         private bool success;
         const SslProtocols _Tls12 = SslProtocols.Tls12; // (SslProtocols)0x00000C00;
         const SecurityProtocolType Tls12 = (SecurityProtocolType)_Tls12;
-        public EmailService(string SmtpHost, int SmtPort,string UserName, string pwd, bool isSSL,
-            string fromEmail,string impsHost, string impsPort )
+        public EmailService(string SmtpHost, int SmtPort, string UserName, string pwd, bool isSSL,
+            string fromEmail, string impsHost, int impsPort)
         {
             MailServer.HostName = SmtpHost;
             MailServer.HostPort = SmtPort;
@@ -26,7 +23,7 @@ namespace FinancialPlanner.Common.EmailManager
             MailServer.IsSSL = isSSL;
             MailServer.FromEmail = fromEmail;
             MailServer.POP3_IMPS_HostName = impsHost;
-            MailServer.POP3_IMPS_HostPort = impsPort;            
+            MailServer.POP3_IMPS_HostPort = impsPort;
         }
         public IList<Email> GetAllMails(string fromEmailID)
         {
@@ -48,7 +45,7 @@ namespace FinancialPlanner.Common.EmailManager
                         }
 
 
-                        messageSet = imap.Search(string.Format("FROM {0}",fromEmailID) , fetchUids);
+                        messageSet = imap.Search(string.Format("FROM {0}", fromEmailID), fetchUids);
                         /*if (success != true)
                         {
                             Logger.LogDebug(imap.LastErrorText);
@@ -135,18 +132,18 @@ namespace FinancialPlanner.Common.EmailManager
                     }
                 }
             }
-            return emails;         
+            return emails;
         }
 
         private static bool connectToIMAPMailServer(Imap imap)
         {
-            if (string.IsNullOrEmpty(MailServer.POP3_IMPS_HostName) || 
+            if (string.IsNullOrEmpty(MailServer.POP3_IMPS_HostName) ||
                 string.IsNullOrEmpty(MailServer.UserName) || string.IsNullOrEmpty(MailServer.Password))
             {
                 return false;
             }
             imap.AppendSeen = true;
-            imap.Port = int.Parse(MailServer.POP3_IMPS_HostPort);
+            imap.Port = MailServer.POP3_IMPS_HostPort;
             imap.Ssl = MailServer.IsSSL;
             imap.Connect(MailServer.POP3_IMPS_HostName);
             imap.Login(MailServer.UserName, FinancialPlanner.Common.DataEncrypterDecrypter.CryptoEngine.Decrypt(MailServer.Password));
@@ -160,7 +157,7 @@ namespace FinancialPlanner.Common.EmailManager
             imap.Ssl = MailServer.IsSSL;
             imap.Connect(MailServer.HostName);
             imap.Login(MailServer.UserName,
-                FinancialPlanner.Common.DataEncrypterDecrypter.CryptoEngine.Decrypt(MailServer.Password));                ;
+                FinancialPlanner.Common.DataEncrypterDecrypter.CryptoEngine.Decrypt(MailServer.Password)); ;
             return imap.IsConnected();
         }
 
@@ -172,7 +169,7 @@ namespace FinancialPlanner.Common.EmailManager
 
         public static bool SendEmail(MailMessage mailMessage)
         {
-          
+
             //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             try
             {
@@ -189,86 +186,139 @@ namespace FinancialPlanner.Common.EmailManager
                     smtp.EnableSsl = (MailServer.IsSSL);
                     smtp.UseDefaultCredentials = false;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    smtp.Credentials = 
+                    smtp.Credentials =
                         new NetworkCredential(MailServer.UserName, MailServer.Password);
-                    smtp.Timeout = 30000;                   
+                    smtp.Timeout = 30000;
                 }
 
                 ServicePointManager.SecurityProtocol = Tls12;
                 smtp.Send(mailMessage);
                 return true;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }
 
-        public static bool SendEmailWithChilkat(MailMessage mailMessage,string attachfilePath)
+        public static bool SendEmailWithChilkat(MailMessage mailMessage, string attachfilePath)
         {
             //using (Chilkat.Imap imap = new Imap())
             //{
-               
-                    Chilkat.MailMan mailman = new Chilkat.MailMan();
 
-                    mailman.UnlockComponent("EASYDAIMAPMAILQ_vcyhVCXs2N0G");
+            Chilkat.MailMan mailman = new Chilkat.MailMan();
+            mailman.UnlockComponent("EASYDAIMAPMAILQ_vcyhVCXs2N0G");
 
 
-                    // Set the SMTP server.
-                    mailman.SmtpHost = MailServer.HostName;
+            // Set the SMTP server.
+            mailman.SmtpHost = MailServer.HostName;
 
-                    // Set the SMTP login/password (if required)
-                    mailman.SmtpUsername = MailServer.UserName;
-                    mailman.SmtpPassword = MailServer.Password;
+            // Set the SMTP login/password (if required)
+            mailman.SmtpUsername = MailServer.UserName;
+            mailman.SmtpPassword = MailServer.Password;
 
-                    // Connect to SMTP port 465 using TLS.
-                    mailman.SmtpSsl = true;
-                    mailman.SmtpPort = MailServer.HostPort;
+            // Connect to SMTP port 465 using TLS.
+            mailman.SmtpSsl = true;
+            mailman.SmtpPort = MailServer.HostPort;
 
-                    // Create a new email object
-                    Chilkat.Email email = new Chilkat.Email();
+            // Create a new email object
+            Chilkat.Email email = new Chilkat.Email();
 
-                    email.Subject = mailMessage.Subject;
-                    email.From = mailMessage.From.ToString();
-                    email.Body = mailMessage.Body;
+            email.Subject = mailMessage.Subject;
+            email.From = mailMessage.From.ToString();
+            email.Body = mailMessage.Body;
 
-                    //email.Subject = "This is a test";
-                    //email.Body = "This is a test";
-                    //email.From = "financialplanning@ascentsolutions.in";
-                    bool success = email.AddTo("", mailMessage.To[0].Address.ToString());
-                    // To add more recipients, call AddTo, AddCC, or AddBcc once per recipient.
+            //email.Subject = "This is a test";
+            //email.Body = "This is a test";
+            //email.From = "financialplanning@ascentsolutions.in";
+            bool success = email.AddTo("", mailMessage.To[0].Address.ToString());
+            if (mailMessage.CC.Count > 0)
+            {
+                success = email.AddCC("", mailMessage.CC[0].Address.ToString());
+            }
+            // To add more recipients, call AddTo, AddCC, or AddBcc once per recipient.
 
-                    // Add some attachments.
-                    // The AddFileAttachment method returns the value of the content-type it chose for the attachment.
+            // Add some attachments.
+            // The AddFileAttachment method returns the value of the content-type it chose for the attachment.
 
-                    string contentType = email.AddFileAttachment(attachfilePath);
+            string contentType = email.AddFileAttachment(attachfilePath);
 
-                    //if (email.LastMethodSuccess != true)
-                    //{
-                    //    Debug.WriteLine(email.LastErrorText);
-                    //    return false;
-                    //}
+            //if (email.LastMethodSuccess != true)
+            //{
+            //    Debug.WriteLine(email.LastErrorText);
+            //    return false;
+            //}
 
-                    // Call SendEmail to connect to the SMTP server and send.
-                    // The connection (i.e. session) to the SMTP server remains
-                    // open so that subsequent SendEmail calls may use the
-                    // same connection.  
-                    success = mailman.SendEmail(email);
-                    if (success != true)
-                    {
-                        Debug.WriteLine(mailman.LastErrorText);
-                        throw new Exception(mailman.LastErrorText);
-                    }
+            // Call SendEmail to connect to the SMTP server and send.
+            // The connection (i.e. session) to the SMTP server remains
+            // open so that subsequent SendEmail calls may use the
+            // same connection.  
+            success = mailman.SendEmail(email);
+            if (success != true)
+            {
+                Debug.WriteLine(mailman.LastErrorText);
+                throw new Exception(mailman.LastErrorText);
+            }
 
-                    success = mailman.CloseSmtpConnection();
-                    if (success != true)
-                    {
-                        Debug.WriteLine("Connection to SMTP server not closed cleanly.");
-                    }
+            success = mailman.CloseSmtpConnection();
+            if (success != true)
+            {
+                Debug.WriteLine("Connection to SMTP server not closed cleanly.");
+            }
 
-                    Debug.WriteLine("Mail with attachments sent!");
-                    return true;
-             //}
+           
+            Debug.WriteLine("Mail with attachments sent!");
+            try
+            {
+                saveEmailToSendItem(email);
+            }
+            catch(Exception ex)
+            {
+                Logger.LogInfo("Error in save email to send item:" + ex.ToString());
+            }
+            return true;
+            //}
             //return true;
         }
-    }    
+
+        private static void saveEmailToSendItem( Email email)
+        {
+            Chilkat.Imap imap = new Chilkat.Imap();
+            imap.UnlockComponent("EASYDAIMAPMAILQ_vcyhVCXs2N0G");
+            // Connect to an IMAP server.
+            // Use TLS
+            imap.Ssl = MailServer.IsSSL;
+            imap.Port = MailServer.POP3_IMPS_HostPort;
+          
+            bool success = imap.Connect(MailServer.POP3_IMPS_HostName);
+            if (success != true)
+            {
+                Debug.WriteLine(imap.LastErrorText);
+                return;
+            }
+
+            // Login
+            success = imap.Login(MailServer.UserName,MailServer.Password);
+            if (success != true)
+            {
+                Debug.WriteLine(imap.LastErrorText);
+                return;
+            }
+
+            // Upload (save) the email to the "Sent" mailbox.
+            success = imap.AppendMail("Sent", email);
+            if (success != true)
+            {
+                Debug.WriteLine(imap.LastErrorText);
+                return;
+            }
+
+            Debug.WriteLine("Email saved to the Sent folder.");
+
+            // Disconnect from the IMAP server.
+            success = imap.Disconnect();
+
+        }
+
+    }
 }

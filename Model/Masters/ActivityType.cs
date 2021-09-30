@@ -397,7 +397,16 @@ namespace FinancialPlanner.Common.Model
         [Display(Name = "Update Quarterly Review Template")]
         UpdateQuarterlyReviewTemplate,
         CreateSessions,
-        DeleteSessions
+        DeleteSessions,
+
+        [Display(Name = "Create MOM")]
+        CreateMOM,
+        [Display(Name = "Update MOM")]
+        UpdateMOM,
+        [Display(Name = "Delete MOM")]
+        DeleteMOM,
+        [Display(Name = "Delete MOM Point")]
+        DeleteMOMPoint,
     }
 
     public enum Source
