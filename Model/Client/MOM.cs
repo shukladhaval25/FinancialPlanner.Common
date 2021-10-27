@@ -22,11 +22,11 @@ namespace FinancialPlanner.Common.Model
         public int Id { get; set; }
         public int MId { get; set; }
         public string DiscussedPoint { get; set; }
-        public string FeatureAction { get; set; }
+        public string FutureAction { get; set; }
         public string Responsibility { get; set; }
         public int EmpId { get; set; }
         public string TaskId { get; set; }
-        public string TaskSatus { get; set; }
+        public string TaskStatus { get; set; }
         public string UserName { get; set; }
     }
 

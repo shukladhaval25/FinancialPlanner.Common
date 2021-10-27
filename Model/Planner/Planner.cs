@@ -20,6 +20,8 @@ namespace FinancialPlanner.Common.Model
         private string _reviewFrequency;
         public string Recommendation { get; set; }
         public string CurrencySymbol { get; set; }
+        public float EquityRatio { get; set; }
+        public float DebtRatio { get; set; }
 
         public int ID
         {
