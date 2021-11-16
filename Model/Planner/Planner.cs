@@ -22,6 +22,7 @@ namespace FinancialPlanner.Common.Model
         public string CurrencySymbol { get; set; }
         public float EquityRatio { get; set; }
         public float DebtRatio { get; set; }
+        public string FaceType { get; set; }
 
         public int ID
         {

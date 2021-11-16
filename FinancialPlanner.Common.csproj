@@ -165,6 +165,7 @@
     <Compile Include="Model\Planner\InvestmentRecommendationRatio.cs" />
     <Compile Include="Model\Planner\LumsumInvestmentRecomendation.cs" />
     <Compile Include="Model\Planner\NetWorth.cs" />
+    <Compile Include="Model\Planner\OtherRecommendationSetting.cs" />
     <Compile Include="Model\Planner\PersonalAccidentInsurance.cs" />
     <Compile Include="Model\Planner\Planner.cs" />
     <Compile Include="Model\Planner\AssumptionMaster.cs" />

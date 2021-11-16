@@ -44,6 +44,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         string _remarks;
         string _attachmentPath;
         DateTime? _lastPremiumDate;
+        bool _setReminder;
 
         public int Id
         {
@@ -494,5 +495,6 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         }
 
         public DateTime? LastPremiumDate { get => _lastPremiumDate; set => _lastPremiumDate = value; }
+        public bool SetReminder { get => _setReminder; set => _setReminder = value; }
     }
 }

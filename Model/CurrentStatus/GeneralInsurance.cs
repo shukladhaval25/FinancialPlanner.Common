@@ -23,6 +23,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
         double _premium;
         string _remark;
         string _attachmentPath;
+        bool _setReminder;
 
         public int Id
         {
@@ -218,5 +219,7 @@ namespace FinancialPlanner.Common.Model.CurrentStatus
                 _attachmentPath = value;
             }
         }
+
+        public bool SetReminder { get => _setReminder; set => _setReminder = value; }
     }
 }
