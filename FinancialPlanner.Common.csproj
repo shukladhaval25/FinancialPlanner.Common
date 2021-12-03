@@ -161,6 +161,8 @@
     <Compile Include="Model\MinutesOfMeeting.cs" />
     <Compile Include="Model\MinutesOfMeetingDetails.cs" />
     <Compile Include="Model\PlannerProcess\ProcessAction.cs" />
+    <Compile Include="Model\Planner\AssumptionConfig.cs" />
+    <Compile Include="Model\Planner\ExistingInsurance.cs" />
     <Compile Include="Model\Planner\InsuranceRecomendation.cs" />
     <Compile Include="Model\Planner\InvestmentRecommendationRatio.cs" />
     <Compile Include="Model\Planner\LumsumInvestmentRecomendation.cs" />
@@ -239,6 +241,7 @@
     <Compile Include="Permission\Forms.cs" />
     <Compile Include="Permission\Role.cs" />
     <Compile Include="Permission\RolePermission.cs" />
+    <Compile Include="Planning\PrimaryStep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestAPIExecutor.cs" />
     <Compile Include="SerializationFactory.cs" />
