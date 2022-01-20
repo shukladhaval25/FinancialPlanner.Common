@@ -18,7 +18,7 @@ namespace FinancialPlanner.Common.Model
         string _otherHolderName;
         int _otherHolderShare;
         int? _mappedGoalId;
-        int _assetMappingShare;
+        decimal _assetMappingShare;
         string _assetRealisationYear;
         string _descryption;
         decimal _growthPercentage;
@@ -140,7 +140,7 @@ namespace FinancialPlanner.Common.Model
             }
         }
 
-        public int AssetMappingShare
+        public decimal AssetMappingShare
         {
             get
             {

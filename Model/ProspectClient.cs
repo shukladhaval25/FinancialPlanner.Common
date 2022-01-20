@@ -72,26 +72,6 @@ namespace FinancialPlanner.Common.Model
             get { return _remarks; }
             set { _remarks = value; }
         }
-        //public DateTime CreatedOn
-        //{
-        //    get { return _createdOn; }
-        //    set { _createdOn = value; }
-        //}
-        //public int CreatedBy
-        //{
-        //    get { return _createdBy; }
-        //    set { _createdBy = value; }
-        //}
-        //public DateTime UpdatedOn
-        //{
-        //    get { return _updatedOn; }
-        //    set { _updatedOn = value; }
-        //}
-        //public int UpdatedBy
-        //{
-        //    get { return _updatedBy; }
-        //    set { _updatedBy = value; }
-        //}
         public string UpdatedByUserName
         {
             get { return _updatedByUserName; }
@@ -112,5 +92,7 @@ namespace FinancialPlanner.Common.Model
             get { return _lstProspectClientConversation; }
             set { _lstProspectClientConversation = value; }
         }
+        public bool IntroductionCompleted { get; set; }
+        public DateTime IntroductionCompletedDate { get; set; }
     }
 }

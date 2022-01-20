@@ -27,3 +27,5 @@ C:\Application Softwares\FinancialPlanner.Common\obj\Release\FinancialPlanner.Co
 C:\Application Softwares\FinancialPlanner.Common\obj\Release\FinancialPlanner.Common.csproj.CopyComplete
 C:\Application Softwares\FinancialPlanner.Common\obj\Release\FinancialPlanner.Common.dll
 C:\Application Softwares\FinancialPlanner.Common\obj\Release\FinancialPlanner.Common.pdb
+C:\Application Softwares\FinancialPlanner.Common\bin\Release\Newtonsoft.Json.xml
+C:\Application Softwares\FinancialPlanner.Common\obj\Release\FinancialPlanner.Common.csprojAssemblyReference.cache

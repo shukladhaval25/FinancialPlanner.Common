@@ -16,7 +16,7 @@ namespace FinancialPlanner.Common.Model
         int _loanYears;
         int _stratYear;
         int _endYear;
-        public int LoanPortion { get; set; }
+        public decimal LoanPortion { get; set; }
 
         public int Id
         {

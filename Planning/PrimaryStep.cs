@@ -15,9 +15,9 @@ namespace FinancialPlanner.Common.Planning
         public string Remarks { get; set; }
         public int DurationInMinutes { get; set; }
         public int TimelineInDays { get; set; }
-        public int PrimaryResponsibility { get; set; }
-        public int Owner { get; set; }
-        public int Checker { get; set; }
+        public int? PrimaryResponsibility { get; set; }
+        public int? Owner { get; set; }
+        public int? Checker { get; set; }
     }
 
     public class LinkSubStep
@@ -30,13 +30,22 @@ namespace FinancialPlanner.Common.Planning
         public string Remarks { get; set; }
         public int DurationInMinutes { get; set; }
         public int TimelineInDays { get; set; }
-        public int PrimaryResponsibility { get; set; }
-        public int Owner { get; set; }
-        public int Checker { get; set; }
+        public int? PrimaryResponsibility { get; set; }
+        public int? Owner { get; set; }
+        public int? Checker { get; set; }
     }
 
     public class ProcessStep : PrimaryStep
     {
         public List<LinkSubStep> LinkSubSteps { get; set; }
+    }
+
+    public class DesignationHierarchy
+    {
+        public int Id { get; set; }
+        public string Designation { get; set; }
+        public string ReportTo { get; set; }
+        public int? ReportingToDesignationId { get; set; }
+        public string Description { get; set; }
     }
 }

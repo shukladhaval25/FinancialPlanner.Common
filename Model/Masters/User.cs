@@ -91,5 +91,7 @@ namespace FinancialPlanner.Common.Model
 
         public int RoleId { get => _roleId; set => _roleId = value; }
         public bool IsDeleted { get => _isDeleted; set => _isDeleted = value; }
+        public int? DesignationId { get; set; }
+        public int? ReportToId { get; set; }
     }
 }
