@@ -241,6 +241,9 @@
     <Compile Include="Permission\Forms.cs" />
     <Compile Include="Permission\Role.cs" />
     <Compile Include="Permission\RolePermission.cs" />
+    <Compile Include="Planning\ClientProcess.cs" />
+    <Compile Include="Planning\ClientProcessDetails.cs" />
+    <Compile Include="Planning\CurrentClientProcess.cs" />
     <Compile Include="Planning\PrimaryStep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestAPIExecutor.cs" />

@@ -94,5 +94,8 @@ namespace FinancialPlanner.Common.Model
         }
         public bool IntroductionCompleted { get; set; }
         public DateTime IntroductionCompletedDate { get; set; }
+
+        public int ClientAssignTo { get; set; }
+        public int ClientId { get; set; }
     }
 }

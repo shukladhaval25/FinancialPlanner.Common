@@ -21,8 +21,8 @@ C:\Application Softwares\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Comm
 C:\Application Softwares\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.dll
 C:\Application Softwares\FinancialPlanner.Common\bin\Debug\FinancialPlanner.Common.pdb
 C:\Application Softwares\FinancialPlanner.Common\bin\Debug\Newtonsoft.Json.dll
+C:\Application Softwares\FinancialPlanner.Common\bin\Debug\Newtonsoft.Json.xml
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.csproj.CoreCompileInputs.cache
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.csproj.CopyComplete
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.dll
 C:\Application Softwares\FinancialPlanner.Common\obj\Debug\FinancialPlanner.Common.pdb
-C:\Application Softwares\FinancialPlanner.Common\bin\Debug\Newtonsoft.Json.xml
