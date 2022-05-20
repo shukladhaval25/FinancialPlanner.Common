@@ -59,6 +59,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public string AssignToName { get => assignToName; set => assignToName = value; }
         public string CustomerName { get => customerName; set => customerName = value; }
         public string OtherName { get => otherName; set => otherName = value; }
+        public int? ProcessApprovedBy { get; set; }
     }
 
     public class TaskTransition
@@ -91,5 +92,12 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public string Username { get => username; set => username = value; }
         public int UpdatedBy { get => updatedBy; set => updatedBy = value; }
         public DateTime UpdatedOn { get => updatedOn; set => updatedOn = value; }
+    }
+
+    public class TaskProcessByPassApproval
+    {
+        public string TaskId { get; set; }
+        public int ProcessApprovedBy { get; set; }
+        public DateTime ProcessApprovedOn { get; set; }
     }
 }

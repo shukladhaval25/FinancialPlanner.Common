@@ -97,6 +97,7 @@
     <Compile Include="EmailManager\EmailService.cs" />
     <Compile Include="EmailManager\MailServer.cs" />
     <Compile Include="ExportExcel.cs" />
+    <Compile Include="Model\CustomNotifier\ClientDOB.cs" />
     <Compile Include="Model\FeesInvoice.cs" />
     <Compile Include="ISerialization.cs" />
     <Compile Include="JSONSerialization.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Model\ProcessAction\PlannerProcess.cs" />
     <Compile Include="Model\QuarterlyReviewTemplate.cs" />
     <Compile Include="Model\RiskProfile\InvestmentSegment.cs" />
+    <Compile Include="Model\RiskProfile\ModelPortfolio.cs" />
     <Compile Include="Model\RiskProfile\RecommendedSchemes.cs" />
     <Compile Include="Model\RiskProfile\RiskProfiledReturn.cs" />
     <Compile Include="Model\RiskProfile\RiskProfiledReturnMaster.cs" />

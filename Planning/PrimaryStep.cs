@@ -18,6 +18,7 @@ namespace FinancialPlanner.Common.Planning
         public int? PrimaryResponsibility { get; set; }
         public int? Owner { get; set; }
         public int? Checker { get; set; }
+        
     }
 
     public class LinkSubStep
@@ -33,6 +34,8 @@ namespace FinancialPlanner.Common.Planning
         public int? PrimaryResponsibility { get; set; }
         public int? Owner { get; set; }
         public int? Checker { get; set; }
+        public bool AllowByPassProcess { get; set; }
+        public List<string> Points { get; set; }
     }
 
     public class ProcessStep : PrimaryStep

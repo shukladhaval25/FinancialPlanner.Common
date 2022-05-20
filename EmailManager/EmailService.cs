@@ -228,13 +228,14 @@ namespace FinancialPlanner.Common.EmailManager
             email.From = mailMessage.From.ToString();
             email.Body = mailMessage.Body;
 
-            //email.Subject = "This is a test";
-            //email.Body = "This is a test";
-            //email.From = "financialplanning@ascentsolutions.in";
             bool success = email.AddTo("", mailMessage.To[0].Address.ToString());
             if (mailMessage.CC.Count > 0)
             {
                 success = email.AddCC("", mailMessage.CC[0].Address.ToString());
+            }
+            if (mailMessage.Bcc.Count > 0)
+            {
+                success = email.AddBcc("", mailMessage.Bcc[0].Address.ToString());
             }
             // To add more recipients, call AddTo, AddCC, or AddBcc once per recipient.
 

@@ -22,5 +22,6 @@ namespace FinancialPlanner.Common.Planning
         public DateTime ExpectedCompletionDate { get; set; }
         public DateTime? ActualCompletionDate { get; set; }
         public string TaskStatus { get; set; }
+        public bool AllowByPassProcess { get; set; }
     }
 }
