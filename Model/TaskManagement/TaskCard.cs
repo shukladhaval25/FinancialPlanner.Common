@@ -16,11 +16,11 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         string transactionType;
 
         object taskTransactionType;
-       
+
         CardType type;
         string title;
         int? customerId;
-        
+
         string description;
         Priority priority;
         TaskStatus taskStatus;
@@ -70,7 +70,7 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         TaskStatus priviousStatus;
         TaskStatus currentStatus;
         DateTime? startDate;
-        DateTime changeDate;        
+        DateTime changeDate;
     }
 
     public class TaskHistory
@@ -99,5 +99,12 @@ namespace FinancialPlanner.Common.Model.TaskManagement
         public string TaskId { get; set; }
         public int ProcessApprovedBy { get; set; }
         public DateTime ProcessApprovedOn { get; set; }
+    }
+
+    public class TaskCardWithComments : TaskCard 
+    {
+        public string Comment { get; set; }
+        public string CommentedBy { get; set; }
+        public DateTime? CommentedOn { get; set; }
     }
 }

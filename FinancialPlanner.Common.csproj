@@ -97,6 +97,7 @@
     <Compile Include="EmailManager\EmailService.cs" />
     <Compile Include="EmailManager\MailServer.cs" />
     <Compile Include="ExportExcel.cs" />
+    <Compile Include="Model\Approval\TaskApprovalDTO.cs" />
     <Compile Include="Model\CustomNotifier\ClientDOB.cs" />
     <Compile Include="Model\FeesInvoice.cs" />
     <Compile Include="ISerialization.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Model\ScoreCalculation\Score.cs" />
     <Compile Include="Model\ScoreCalculation\ScoreEntry.cs" />
     <Compile Include="Model\ScoreCalculation\ScoreRange.cs" />
+    <Compile Include="Model\TaskManagement\TaskLinkSubPointsStatus.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\ChangeOfName.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\Nomination.cs" />
     <Compile Include="Model\TaskManagement\MFTransactions\MinorToMajor.cs" />

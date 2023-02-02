@@ -97,5 +97,7 @@ namespace FinancialPlanner.Common.Model
 
         public int ClientAssignTo { get; set; }
         public int ClientId { get; set; }
+        public int ResposibilityAssignTo { get; set; }
+        public int OperationExecute { get; set; }
     }
 }

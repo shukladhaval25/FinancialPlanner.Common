@@ -15,5 +15,6 @@ namespace FinancialPlanner.Common.Planning
         public int LinkStepId;
         public String Status;
         public bool IsProcespectClient;
+        public string Description;
     }
 }

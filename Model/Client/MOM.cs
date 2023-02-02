@@ -15,6 +15,7 @@ namespace FinancialPlanner.Common.Model
         public bool MarkAsImportant { get; set; }
         public string Duration { get; set; }
         public string Notes { get; set; }
+       
     }
 
     public class MOMPoint
@@ -40,6 +41,7 @@ namespace FinancialPlanner.Common.Model
         public bool MarkAsImportant { get; set; }
         public string Duration { get; set; }
         public string Notes { get; set; }
+        public DateTime? EmailSendDate { get; set; }
         public List<MOMPoint> MOMPoints { get; set; }
     }
 }
