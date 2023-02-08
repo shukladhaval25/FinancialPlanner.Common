@@ -14,10 +14,13 @@ namespace FinancialPlanner.Common.Model.Approval
         public DateTime RequestedOn { get; set; }
         public string AuthorisedUsersToApprove { get; set; }
         public ApprovalStatus Status { get; set; }
-        public int ActionTakenBy { get; set; }
-        public DateTime ActionTakenOn { get; set; }
+        public int? ActionTakenBy { get; set; }
+        public DateTime? ActionTakenOn { get; set; }
         public string Description { get; set; }
         public ApprovalType ApprovalType { get; set; }
+        public string RequestedBy { get; set; }
+        public string ActionBy { get; set; }
+        public string ItemId { get; set; }
     }
 
     public enum ApprovalStatus
@@ -30,8 +33,9 @@ namespace FinancialPlanner.Common.Model.Approval
 
     public enum ApprovalType
     {
-        None = 0,
+        All = 0,
         TaskByPass = 1,
-        PlanLock = 2
+        PlanLock = 2,
+        Reassign = 3
     }
 }

@@ -407,6 +407,15 @@ namespace FinancialPlanner.Common.Model
         DeleteMOM,
         [Display(Name = "Delete MOM Point")]
         DeleteMOMPoint,
+
+        [Display(Name = "Add item for approval")]
+        AddApproval,
+        [Display(Name = "Item get approvaed")]
+        ItemApproved,
+        [Display(Name = "Item get rejected")]
+        ItemRejected,
+        [Display(Name = "Item get reassign")]
+        ItemReassign,
     }
 
     public enum Source
