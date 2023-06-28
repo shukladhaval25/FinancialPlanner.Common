@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace FinancialPlanner.Common.Model
         public float DebtRatio { get; set; }
         public string FaceType { get; set; }
         public bool  IsPlanLocked { get; set; }
-
+        public PlannerOptionType PlannerOptionType { get; set; } = PlannerOptionType.MFD;
         public int ID
         {
             get { return _id; }
@@ -83,5 +84,12 @@ namespace FinancialPlanner.Common.Model
 
         public bool IsDeleted { get => _isDeleted; set => _isDeleted = value; }
         public string ReviewFrequency { get => _reviewFrequency; set => _reviewFrequency = value; }
+    }
+    public enum PlannerOptionType
+    {
+        [Description("MFD")]
+        MFD,
+        [Description("RIA")]
+        RIA
     }
 }

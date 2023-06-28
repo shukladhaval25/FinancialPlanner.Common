@@ -243,6 +243,7 @@ namespace FinancialPlanner.Common.EmailManager
             // The AddFileAttachment method returns the value of the content-type it chose for the attachment.
 
             string contentType = email.AddFileAttachment(attachfilePath);
+            
 
             //if (email.LastMethodSuccess != true)
             //{
@@ -274,6 +275,91 @@ namespace FinancialPlanner.Common.EmailManager
                 saveEmailToSendItem(email);
             }
             catch(Exception ex)
+            {
+                Logger.LogInfo("Error in save email to send item:" + ex.ToString());
+            }
+            return true;
+            //}
+            //return true;
+        }
+
+        public static bool SendEmailWithChilkatMultipleAttachments(MailMessage mailMessage, string[] attachfilePaths)
+        {
+            //using (Chilkat.Imap imap = new Imap())
+            //{
+
+            Chilkat.MailMan mailman = new Chilkat.MailMan();
+            mailman.UnlockComponent("EASYDAIMAPMAILQ_vcyhVCXs2N0G");
+
+
+            // Set the SMTP server.
+            mailman.SmtpHost = MailServer.HostName;
+
+            // Set the SMTP login/password (if required)
+            mailman.SmtpUsername = MailServer.UserName;
+            mailman.SmtpPassword = MailServer.Password;
+
+            // Connect to SMTP port 465 using TLS.
+            mailman.SmtpSsl = true;
+            mailman.SmtpPort = MailServer.HostPort;
+
+            // Create a new email object
+            Chilkat.Email email = new Chilkat.Email();
+
+            email.Subject = mailMessage.Subject;
+            email.From = mailMessage.From.ToString();
+            email.Body = mailMessage.Body;
+
+            bool success = email.AddTo("", mailMessage.To[0].Address.ToString());
+            if (mailMessage.CC.Count > 0)
+            {
+                success = email.AddCC("", mailMessage.CC[0].Address.ToString());
+            }
+            if (mailMessage.Bcc.Count > 0)
+            {
+                success = email.AddBcc("", mailMessage.Bcc[0].Address.ToString());
+            }
+            // To add more recipients, call AddTo, AddCC, or AddBcc once per recipient.
+
+            // Add some attachments.
+            // The AddFileAttachment method returns the value of the content-type it chose for the attachment.
+            foreach(string attachfilePath in attachfilePaths)
+            {
+                string contentType = email.AddFileAttachment(attachfilePath);
+            }
+            
+
+
+            //if (email.LastMethodSuccess != true)
+            //{
+            //    Debug.WriteLine(email.LastErrorText);
+            //    return false;
+            //}
+
+            // Call SendEmail to connect to the SMTP server and send.
+            // The connection (i.e. session) to the SMTP server remains
+            // open so that subsequent SendEmail calls may use the
+            // same connection.  
+            success = mailman.SendEmail(email);
+            if (success != true)
+            {
+                Debug.WriteLine(mailman.LastErrorText);
+                throw new Exception(mailman.LastErrorText);
+            }
+
+            success = mailman.CloseSmtpConnection();
+            if (success != true)
+            {
+                Debug.WriteLine("Connection to SMTP server not closed cleanly.");
+            }
+
+
+            Debug.WriteLine("Mail with attachments sent!");
+            try
+            {
+                saveEmailToSendItem(email);
+            }
+            catch (Exception ex)
             {
                 Logger.LogInfo("Error in save email to send item:" + ex.ToString());
             }
