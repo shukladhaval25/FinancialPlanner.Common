@@ -21,7 +21,12 @@ namespace FinancialPlanner.Common.DataConversion
             foreach (PropertyInfo prop in Props)
             {
                 //Setting column names as Property names  
-                dataTable.Columns.Add(prop.Name);
+                //dataTable.Columns.Add(prop.Name);
+                if (prop.Name.ToUpper().Equals("DUEDATE") || prop.Name.ToUpper().Equals("CREATEDON") || prop.Name.ToUpper().Equals("UPDATEDON") ||
+                   prop.Name.ToUpper().Equals("ASSIGNON"))
+                    dataTable.Columns.Add(prop.Name, typeof(DateTime));
+                else
+                    dataTable.Columns.Add(prop.Name);
             }
             if (items != null)
             {
